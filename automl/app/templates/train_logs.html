@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #006400;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            color: #006400;
+        }
+        input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+            width: 200px;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"], .logout-button {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover, .logout-button:hover {
+            background-color: #062006;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            width: 200px; /* Adjust as needed */
+            left: 50%;
+            bottom: 125%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .tooltip:hover::after {
+            opacity: 0.75;
+            visibility: visible;
+        }
+        /*footer style*/
+        footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+        footer section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer h2, footer h3 {
+            color: #333;
+        }
+        footer p, footer ul, footer table {
+            color: #555;
+            line-height: 1.6;
+        }
+        footer ul {
+            padding-left: 20px;
+        }
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        footer table th, footer table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        footer table th {
+            background-color: #f2f2f2;
+        }
+        footer table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .busy-cursor {
+            cursor: wait;
+        }
+        .flashes {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            margin: auto;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .flashes li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .flashes li.error {
+            background-color: #ffe5e5;
+            border-color: #ff6666;
+        }
+        .flashes li.success {
+            background-color: #e6ffe6;
+            border-color: #66ff66;
+        }
+    </style>
+    
+    <title>Train Logs</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var eventSource = new EventSource("/train_logs_stream");
+        eventSource.onmessage = function(event) {
+            var logsDiv = document.getElementById("logs_text_area");
+            logsDiv.innerHTML += event.data + "\n";
+        };
+    </script>
+
+    {% extends "base.html" %}
+  
+    {% block title %}Train Logs{% endblock %}
+  
+    {% block content %}
+
+        <!-- flash content -->
+        <div>{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}</div> 
+        <!-- flash content -->
+              
+        <h1>Train Logs</h1>
+        <textarea name="logs_text_area" id="logs_text_area" cols="100" rows="50" readonly>
+            {% if LOGS is none %}
+                {{ RESPONSE }}
+            {% else %}
+                {{ LOGS }}
+            {% endif %}
+        </textarea>
+        <br>
+        <form action="train_logs" method="post" id="train_logs_form">
+            <button type="submit" data-tooltip="Stops jobs and destroys virtual machine for created training operation. Downloads logs if training job completed successfully." class="tooltip">Stop Job</button>
+        </form>
+        
+        <script>
+            // Check if the logs textarea exists
+            var logsTextArea = document.getElementById('logs_text_area');
+            if (logsTextArea) {
+                // Get the content of the textarea
+                var logsContent = logsTextArea.textContent;
+                var fileName = logsTextArea.textContent.split("LOG_FILENAME:")[1].split(":LOG_FILENAME")[0]
+                // Create a Blob with the logs content
+                var blob = new Blob([logsContent], { type: 'text/plain' });
+                
+                // Create a temporary URL for the Blob
+                var url = URL.createObjectURL(blob);
+                
+                // Create a link element
+                var link = document.createElement('a');
+                
+                // Set the href attribute to the temporary URL
+                link.href = url;
+                
+                // Set the download attribute to specify the filename
+                link.download = fileName;
+                
+                // Programmatically click the link to trigger the download
+                link.click();
+                
+                // Clean up by revoking the temporary URL
+                URL.revokeObjectURL(url);
+            }
+        </script>
+
+        <script>
+            document.getElementById('train_logs_form').addEventListener('submit', function() {
+                // Add the busy cursor class to the body
+                document.body.classList.add('busy-cursor');
+            });
+        </script>
+
+    {% endblock %}
+    
+</body>
+</html>

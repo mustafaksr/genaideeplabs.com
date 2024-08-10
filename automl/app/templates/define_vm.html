@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8f0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    h1 {
+        color: #006400;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        margin-right: 10px;
+        color: #006400;
+    }
+    input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+        width: 200px;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #006400;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover {
+        background-color: #062006;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+  }
+  
+  .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      width: 200px; /* Adjust as needed */
+      left: 50%;
+      bottom: 125%;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .tooltip:hover::after {
+      opacity: 0.75;
+      visibility: visible;}
+
+      /*footer style*/
+      footer {
+        text-align: left;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-top: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    footer h2, footer h3 {
+        color: #333;
+    }
+    
+    footer p, footer ul, footer table {
+        color: #555;
+        line-height: 1.6;
+    }
+    
+    footer ul {
+        padding-left: 20px;
+    }
+    
+    footer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    
+    footer table th, footer table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    footer table th {
+        background-color: #f2f2f2;
+    }
+    
+    footer table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    .busy-cursor {
+        cursor: wait;
+    }
+    .flashes {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        margin: auto;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .flashes li {
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .flashes li.error {
+        background-color: #ffe5e5;
+        border-color: #ff6666;
+    }
+    .flashes li.success {
+        background-color: #e6ffe6;
+        border-color: #66ff66;
+    }
+</style>
+  <title>Select Virtual Machine</title>
+  
+</head>
+<body>
+    
+    {% extends "base.html" %}
+
+        {% block title %}Define Data{% endblock %}
+      
+        {% block content %}
+   
+        <!-- flash content -->
+             <div>{% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <ul class="flashes">
+                  {% for message in messages %}
+                  <li class="{{ message.category }}">{{ message }}</li>
+                  {% endfor %}
+              </ul>
+              {% endif %}
+              {% endwith %}</div> 
+              <!-- flash content -->
+
+  <h1>Select Virtual Machine</h1>
+  <form id="terraform_form">
+
+    <label for="machine_name" data-tooltip="Enter a name for the virtual machine. Char range (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])" class="tooltip">Name of Virtual Machine:</label>
+    <input type="text" id="machine_name" value="{{ vm_form_data.get('machine_name', '') }}" name="machine_name" required><br><br>
+
+    <label for="machine_type" data-tooltip="Select the type of virtual machine. The machine type determines the number of CPUs and amount of memory." class="tooltip">Type of Virtual Machine:</label>
+    <select id="machine_type" value="{{ vm_form_data.get('machine_type', '') }}" name="machine_type" required>
+
+         <!-- <option value="n1-standard-1">n1-standard-1</option>  -->
+        <option value="n1-standard-2" selected>n1-standard-2</option>
+        <option value="n1-standard-4">n1-standard-4</option>
+        <!-- <option value="n1-standard-8">n1-standard-8</option>
+        <option value="n1-standard-16">n1-standard-16</option>
+        <option value="n1-standard-32">n1-standard-32</option> -->
+        <!-- <option value="n1-standard-64">n1-standard-64</option> -->
+        <!-- <option value="n1-standard-96">n1-standard-96</option> -->
+        <option value="c2d-standard-2">c2d-standard-2</option> 
+        <option value="c2d-standard-4">c2d-standard-4</option>
+        <!-- <option value="c2d-standard-8">c2d-standard-8</option> 
+        <option value="c2d-standard-16">c2d-standard-16</option>
+        <option value="c2d-standard-32">c2d-standard-32</option> -->
+        <!-- <option value="c2d-standard-56">c2d-standard-56</option> -->
+        <!-- <option value="c2d-standard-112">c2d-standard-112</option> -->
+    </select><br><br>
+
+    <label for="disk_size" data-tooltip="Specify the size of the disk in gigabytes (GB). The minimum is 50 GB." class="tooltip">Disk Size (GB):</label>
+    <input type="number" id="disk_size" value="{{ vm_form_data.get('disk_size', '50') }}" name="disk_size" min="50" max="100" required><br><br>
+
+    <label for="disk_type"  data-tooltip="Select the type of disk. Options include standard (HDD), balanced (standard SSD), and high-performance SSD." class="tooltip">Type of Disk:</label>
+    <select id="disk_type" value="{{ vm_form_data.get('disk_type', '') }}" name="disk_type" required>
+        <option value="pd-standard">pd-standard</option>
+        <option value="pd-balanced" selected>pd-balanced</option>
+        <!-- <option value="pd-ssd">pd-ssd</option> -->
+    </select><br><br>
+
+    <label for="disk_name" data-tooltip="Enter a name for the disk. This name will be used to identify the disk in your Google Cloud project." class="tooltip">Name of Disk:</label>
+    <input type="text" id="disk_name" value="{{ vm_form_data.get('disk_name', '') }}" name="disk_name" value="pd-balanced-50GB" required><br><br>
+
+
+
+    <label for="region" data-tooltip="Select the region where the virtual machine will be hosted. Choose a region close to your users for better performance." class="tooltip">Google Cloud Region:</label>
+    <select id="region" name="region" value="{{ vm_form_data.get('region', '') }}"  required>
+        <option value="africa-south1">africa-south1</option>
+        <option value="asia-east1">asia-east1</option>
+        <option value="asia-east2">asia-east2</option>
+        <option value="asia-northeast1">asia-northeast1</option>
+        <option value="asia-northeast2">asia-northeast2</option>
+        <option value="asia-northeast3">asia-northeast3</option>
+        <option value="asia-south1">asia-south1</option>
+        <option value="asia-south2">asia-south2</option>
+        <option value="asia-southeast1">asia-southeast1</option>
+        <option value="asia-southeast2">asia-southeast2</option>
+        <option value="australia-southeast1">australia-southeast1</option>
+        <option value="australia-southeast2">australia-southeast2</option>
+        <option value="europe-central2">europe-central2</option>
+        <option value="europe-north1">europe-north1</option>
+        <option value="europe-southwest1">europe-southwest1</option>
+        <option value="europe-west1">europe-west1</option>
+        <option value="europe-west10">europe-west10</option>
+        <option value="europe-west12">europe-west12</option>
+        <option value="europe-west2">europe-west2</option>
+        <option value="europe-west3">europe-west3</option>
+        <option value="europe-west4">europe-west4</option>
+        <option value="europe-west6">europe-west6</option>
+        <option value="europe-west8">europe-west8</option>
+        <option value="europe-west9">europe-west9</option>
+        <option value="me-central1">me-central1</option>
+        <option value="me-central2">me-central2</option>
+        <option value="me-west1">me-west1</option>
+        <option value="northamerica-northeast1">northamerica-northeast1</option>
+        <option value="northamerica-northeast2">northamerica-northeast2</option>
+        <option value="southamerica-east1">southamerica-east1</option>
+        <option value="southamerica-west1">southamerica-west1</option>
+        <option value="us-central1">us-central1</option>
+        <option value="us-east1">us-east1</option>
+        <option value="us-east4">us-east4</option>
+        <option value="us-east5">us-east5</option>
+        <option value="us-south1">us-south1</option>
+        <option value="us-west1">us-west1</option>
+        <option value="us-west2">us-west2</option>
+        <option value="us-west3" selected>us-west3</option>
+        <option value="us-west4">us-west4</option>
+    </select><br><br>
+
+    <label for="zone" data-tooltip="Select the zone within the region where the virtual machine will be hosted. This determines the specific data center location." class="tooltip">Zone of Virtual Machine:</label>
+    <select id="zone" value="{{ vm_form_data.get('zone', '') }}" name="zone" required>
+        <option value="us-central1-a">us-central1-a</option>
+        <option value="us-central1-b">us-central1-b</option>
+        <option value="us-central1-c" selected>us-central1-c</option>
+    </select><br><br>
+
+    <button type="submit" data-tooltip="Click to proceed to the next step after defining the virtual machine details." class="tooltip" >Next</button>
+</form>
+
+<script>
+    document.getElementById('terraform_form').addEventListener('submit', function() {
+        // Add the busy cursor class to the body
+        document.body.classList.add('busy-cursor');
+    });
+</script>
+
+<script>
+
+    document.getElementById("terraform_form").addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const formValues = Object.fromEntries(formData.entries());
+  
+      fetch('/define_vm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formValues)
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = '/define_data'; // Redirect to define_data route
+        } else {
+          return response.json().then(data => {
+            throw new Error(data.error || 'Failed to update Terraform variables.');
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert(error.message);
+      });
+    });
+  
+    let diskSize = '';
+    let diskType = '';
+    
+    function updateDiskName() {
+        if (diskSize && diskType) {
+            document.getElementById('disk_name').value = `${diskType}-${diskSize}GB`;
+        } else {
+            document.getElementById('disk_name').value = ''; // Clear the value if either input is empty
+        }
+    }
+    
+    document.getElementById('disk_size').addEventListener('input', function(event) {
+        diskSize = event.target.value;
+        updateDiskName();
+    });
+    
+    document.getElementById('disk_type').addEventListener('input', function(event) {
+        diskType = event.target.value;
+        updateDiskName();
+    });
+    
+  
+    document.getElementById('region').addEventListener('change', function(event) {
+      const region = event.target.value;
+      const zoneSelect = document.getElementById('zone');
+      zoneSelect.innerHTML = ''; // Clear existing options
+      ['a', 'b', 'c'].forEach(suffix => {
+        const option = document.createElement('option');
+        option.value = `${region}-${suffix}`;
+        option.textContent = `${region}-${suffix}`;
+        zoneSelect.appendChild(option);
+      });
+    });
+  
+    // Trigger the change event to populate the initial zones based on the default region
+    document.getElementById('region').dispatchEvent(new Event('change'));
+  </script>
+  
+  <footer>
+    <h1>Glossary</h1>
+    <section>
+        <h2>Virtual Machine (VM) in Cloud Computing</h2>
+        <p><strong>Virtual Machines (VMs)</strong> are virtualized computing environments that function like physical computers with their own CPUs, memory, storage, and network interfaces. They run on physical hardware, but they are isolated from each other, enabling multiple VMs to run on a single piece of hardware.</p>
+        
+        <h3>Key Concepts in Virtual Machine Configuration</h3>
+        <ul>
+            <li><strong>Project ID</strong>: A unique identifier for your project within the Google Cloud ecosystem. It helps in managing resources and permissions specific to that project.</li>
+            <li><strong>Machine Name</strong>: A human-readable identifier for the VM. This name helps users to distinguish between different VMs within their cloud infrastructure.</li>
+            <li><strong>Machine Type</strong>: Defines the hardware configuration of the VM, including the number of virtual CPUs (vCPUs) and the amount of memory. Examples include n1-standard-1 (1 vCPU, 3.75 GB RAM) and n1-standard-16 (16 vCPUs, 60 GB RAM).</li>
+            <li><strong>Disk Size</strong>: The amount of storage allocated to the VM. It's specified in gigabytes (GB) and determines the space available for storing data and applications.</li>
+            <li><strong>Disk Type</strong>: The kind of storage used for the VM's disk. Options typically include standard (HDD), balanced (standard SSD), and high-performance SSD, affecting both performance and cost.</li>
+            <li><strong>Region</strong>: The geographical location where the VM is hosted. Selecting a region close to your users can reduce latency and improve performance.</li>
+            <li><strong>Zone</strong>: A deployment area within a region. Zones help in distributing resources and workloads to enhance availability and fault tolerance.</li>
+        </ul>
+        
+        <h3>Components of a Virtual Machine</h3>
+        <ul>
+            <li><strong>vCPUs</strong>: Virtual Central Processing Units that perform the computation tasks of the VM. The number of vCPUs determines the processing power of the VM.</li>
+            <li><strong>Memory</strong>: The RAM allocated to the VM. More memory allows the VM to handle more or larger applications simultaneously.</li>
+            <li><strong>Storage</strong>: Persistent disk storage used by the VM. The disk can be used to store the operating system, applications, and data.</li>
+            <li><strong>Network Interface</strong>: Connects the VM to a network, enabling communication with other VMs, on-premises systems, and the internet.</li>
+        </ul>
+        
+        <h3>Setting Up a Virtual Machine</h3>
+        <ul>
+            <li><strong>Selecting a Project</strong>: Choose the project under which the VM will be created. Ensure that the project has the necessary permissions and resources.</li>
+            <li><strong>Defining Machine Specifications</strong>: Specify the machine type, disk size, and other configurations based on the workload requirements and budget constraints.</li>
+            <li><strong>Choosing a Region and Zone</strong>: Select a region and zone that provide the desired balance of performance, cost, and redundancy.</li>
+            <li><strong>Configuring Storage</strong>: Determine the type and size of the disk storage. Consider performance needs and storage costs.</li>
+        </ul>
+        
+        <h3>Example</h3>
+        <p>Suppose you are setting up a VM for a web application. Your configuration might look like this:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project ID</td>
+                    <td>my-web-app-project</td>
+                </tr>
+                <tr>
+                    <td>Machine Name</td>
+                    <td>web-server-01</td>
+                </tr>
+                <tr>
+                    <td>Machine Type</td>
+                    <td>n1-standard-4</td>
+                </tr>
+                <tr>
+                    <td>Disk Size</td>
+                    <td>100 GB</td>
+                </tr>
+                <tr>
+                    <td>Disk Type</td>
+                    <td>pd-ssd</td>
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    <td>us-central1</td>
+                </tr>
+                <tr>
+                    <td>Zone</td>
+                    <td>us-central1-a</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>This configuration provides a balance of compute power, storage performance, and geographical location to meet the needs of a typical web application.</p>
+        
+        <h3>Conclusion</h3>
+        <p>Understanding the components and configuration options for virtual machines is crucial for optimizing performance, cost, and reliability in cloud computing environments. Proper setup and management of VMs can lead to efficient and scalable application deployment.</p>
+    </section>
+  </footer>
+  
+  {% endblock %}
+</body>
+</html>

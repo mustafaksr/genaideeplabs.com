@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8f0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    h1 {
+        color: #006400;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        margin-right: 10px;
+        color: #006400;
+    }
+    input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+        width: 200px;
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #006400;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover {
+        background-color: #062006;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #006400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  button:hover {
+      background-color: #062006;
+  }
+  input[type="checkbox"] {
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px; /* Adjust as needed */
+        left: 50%;
+        bottom: 125%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    .tooltip:hover::after {
+        opacity: 0.75;
+        visibility: visible;
+    }
+    /* Table Styles */
+    table {
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    table th {
+        background-color: #f2f2f2;
+        color: #333;
+        text-transform: uppercase;
+    }
+    table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    table tbody tr:hover {
+        background-color: #f0f0f0;
+    }
+    /* Footer Styles */
+    footer {
+        text-align: left;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-top: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+        margin-top: 50px;
+    }
+    footer section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    footer h2, footer h3 {
+        color: #333;
+    }
+    footer p, footer ul {
+        color: #555;
+        line-height: 1.6;
+    }
+    footer ul {
+        padding-left: 20px;
+    }
+    .busy-cursor {
+        cursor: wait;
+    }
+    .flashes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      margin: auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin-top: 20px;
+  }
+  .flashes li {
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+  }
+  .flashes li.error {
+      background-color: #ffe5e5;
+      border-color: #ff6666;
+  }
+  .flashes li.success {
+      background-color: #e6ffe6;
+      border-color: #66ff66;
+  }
+  </style>
+  <title>Define Search Engine Names</title>
+</head>
+<body>
+    
+{% extends "base.html" %}
+
+{% block title %}Define SE Names{% endblock %}
+  
+{% block content %}
+   
+<!-- Flash messages -->
+<div>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+          <li class="{{ message.category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</div> 
+<!-- End flash messages -->
+
+<h1>Define Search Engine Names</h1>
+<form id="job_form" method="post" action="{{ url_for('se_names') }}">
+
+  <label for="ds_display_name" data-tooltip="Enter a name for the Data Store. This name will be used to identify the Data Store. It needs to be unique." class="tooltip">Data Store Name:</label>
+  <input type="text" id="ds_display_name" value="{{ job_form_data.get('ds_display_name', '') }}" name="ds_display_name" required><br><br>
+
+  <label for="se_datastore_display_name" data-tooltip="Enter a name for the Search Engine Name. This name will be used to identify the Search Engine Name. It needs to be unique." class="tooltip">Search Engine Name:</label>
+  <input type="text" id="se_datastore_display_name" value="{{ job_form_data.get('se_datastore_display_name', '') }}" name="se_datastore_display_name" required><br><br>
+
+  <label for="ds_id" data-tooltip="Enter a ID for the Data Store. This name will be used to identify the Data Store. It needs to be unique. Within chars [a-z0-9][a-z0-9-_]*. Example: ds-id-0" class="tooltip">Data Store ID:</label>
+  <input type="text" id="ds_id" value="{{ job_form_data.get('ds_id', '') }}" name="ds_id" required><br><br>
+
+  <label for="se_id" data-tooltip="Enter a name for the Search Engine ID. This name will be used to identify the Search Engine ID. It needs to be unique. Within chars [a-z0-9][a-z0-9-_]*. Example: se-id-1" class="tooltip">Search Engine ID:</label>
+  <input type="text" id="se_id" value="{{ job_form_data.get('se_id', '') }}" name="se_id" required><br><br>
+
+  <label for="location" data-tooltip="Select the location where the Search Engine will be hosted. This determines the specific Search Engine location." class="tooltip">Search Engine Location:</label>
+    <select id="location" name="location" required>
+
+        <option value="global" selected>global</option>
+        <option value="us">us</option>
+        <option value="eu">us</option>
+    </select><br><br>
+  
+  <label for="load_search_engine" data-tooltip="Check to load the search engine." class="tooltip">Load Search Engine</label>
+  <input type="checkbox" id="load_search_engine" name="load_search_engine" {% if job_form_data.get('load_search_engine', '') %} checked {% endif %}>
+
+    <!-- TODO: Hidden input for selected load_search_engine UUID -->
+    <input type="hidden" id="load_search_engine_path" name="load_search_engine_path">
+
+  <br><br>
+
+  <button type="submit" data-tooltip="Click to proceed to the next step after defining the virtual machine details." class="tooltip" >Next</button>
+</form>
+<br><br>
+<h2>Previous Jobs</h2>
+<!-- Table to display job names and UUIDs -->
+{% if job_names_uuid %}
+  <table>
+    <thead>
+      <tr>
+        <th>Data Store Name</th>
+        <th>Search Engine Name</th>
+        <th>Data Store ID</th>
+        <th>Search Engine ID</th>
+        <th>UUID</th>
+        <th>Status</th>
+        <th>Create Time</th>
+        <th>Load Search Engine</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ds_display_name,se_datastore_display_name,data_store_id,search_engine_id ,uuid,status,create_time in job_names_uuid %}
+        <tr>
+          <td>{{ ds_display_name }}</td>
+          <td>{{ se_datastore_display_name }}</td>
+          <td>{{ data_store_id }}</td>
+          <td>{{ search_engine_id }}</td>
+          <td>{{ uuid }}</td>
+          <td>{{ status }}</td>
+          <td>{{ create_time }}</td>
+          <td>
+            <input class="table_check" type="checkbox" id="load_search_engine_{{ uuid }}" value="{{ uuid }}" name="load_search_engine" {% if status == 'deleted' %}disabled{% endif %}>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+<!-- End table -->
+
+<script>
+  document.getElementById('job_form').addEventListener('submit', function() {
+    // Add the busy cursor class to the body
+    document.body.classList.add('busy-cursor');
+  });
+
+  document.querySelectorAll('.table_check').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        document.querySelectorAll('.table_check').forEach(otherCheckbox => {
+          if (otherCheckbox !== this) {
+            otherCheckbox.checked = false;
+          }
+        });
+        // Update hidden input value with selected UUID and corresponding model name
+        const uuid = this.value;
+        const modelName = this.closest('tr').querySelector('td:nth-child(2)').textContent;
+        document.getElementById('load_search_engine_path').value = this.value;
+      } else {
+        // If unchecked, clear hidden input value
+        document.getElementById('load_search_engine_path').value = '';
+      }
+    });
+  });
+
+</script>
+
+<footer>
+  <h1>Glossary</h1>
+  <section>
+    <h2>Job Name</h2>
+    <p><strong>Job Name</strong> needs to be unique. According to this Job Name, you will get a unique UUID for the training job. For each new training job, you need to define a unique job name.</p>
+    
+    <h3>Best Practices When Defining Job Names</h3>
+    <ul>
+      <li><strong>Be Descriptive:</strong> Use descriptive names that clearly indicate the purpose of the job, such as `image-classification-v1` or `text-analysis-2024-06`.</li>
+      <li><strong>Use Timestamps:</strong> Incorporate timestamps to ensure uniqueness, e.g., `training-job-20240619-1230`.</li>
+      <li><strong>Avoid Special Characters:</strong> Stick to alphanumeric characters, dashes, and underscores to avoid issues with naming conventions and system compatibility.</li>
+      <li><strong>Consistent Naming Conventions:</strong> Establish and follow a consistent naming convention across all jobs to facilitate easier management and tracking.</li>
+      <li><strong>Include Project or Team Identifiers:</strong> Add identifiers to indicate which project or team the job belongs to, e.g., `teamA-text-mining-job1`.</li>
+      <li><strong>Version Control:</strong> Include version numbers to track different iterations of similar jobs, e.g., `data-cleaning-v2`.</li>
+    </ul>
+  </section>
+</footer>
+  
+{% endblock %}
+</body>
+</html>

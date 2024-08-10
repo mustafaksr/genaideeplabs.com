@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Define Task</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f8f0;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+      h1 {
+          color: #006400;
+      }
+      form {
+          margin-top: 20px;
+      }
+      label {
+          display: inline-block;
+          width: 150px;
+          text-align: right;
+          margin-right: 10px;
+          color: #006400;
+      }
+      input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+          width: 200px;
+          padding: 5px;
+          margin: 5px 0;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+      button[type="submit"] {
+          padding: 10px 20px;
+          background-color: #006400;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      button[type="submit"]:hover {
+          background-color: #062006;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+    
+      .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px;
+        left: 50%;
+        bottom: 125%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+    
+      .tooltip:hover::after {
+        opacity: 0.75;
+        visibility: visible;
+      }
+
+      /*footer style*/
+      footer {
+        text-align: left;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-top: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+      }
+      
+      footer section {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      footer h2, footer h3 {
+        color: #333;
+      }
+      
+      footer p, footer ul, footer table {
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      footer ul {
+        padding-left: 20px;
+      }
+      
+      footer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      
+      footer table th, footer table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      
+      footer table th {
+        background-color: #f2f2f2;
+      }
+      
+      footer table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .busy-cursor {
+        cursor: wait;
+    }
+    .flashes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      margin: auto;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      margin-top: 20px;
+  }
+  .flashes li {
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+  }
+  .flashes li.error {
+      background-color: #ffe5e5;
+      border-color: #ff6666;
+  }
+  .flashes li.success {
+      background-color: #e6ffe6;
+      border-color: #66ff66;
+  }
+  </style>
+    
+  </head>
+  <body>
+    
+    {% extends "base.html" %}
+
+    {% block title %}Define Task{% endblock %}
+    
+    {% block content %}
+
+   
+        <!-- flash content -->
+             <div>{% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <ul class="flashes">
+                  {% for message in messages %}
+                  <li class="{{ message.category }}">{{ message }}</li>
+                  {% endfor %}
+              </ul>
+              {% endif %}
+              {% endwith %}</div> 
+              <!-- flash content -->
+
+
+    <h1>Define Task</h1>
+    <hr>
+    <form method="POST" id="task_form">
+      <label for="label" data-tooltip="The target column to be predicted by the model. Choose the label column from your data." class="tooltip">Label Column:</label>
+      <select id="label" value="{{ task_form.get('label', '') }}" name="label">
+        {% for column in columns %}
+          <option value="{{ column }}">{{ column }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <label for="problem_type" data-tooltip="Select the type of problem you are solving (e.g., classification, regression). Change binary first to update." class="tooltip">Problem Type:</label>
+      <select id="problem_type" value="{{ task_form.get('problem_type', '') }}" name="problem_type" onchange="updateEvalMetrics()" required>
+        <option value="binary">Binary</option>
+        <option value="multiclass">Multiclass</option>
+        <option value="regression">Regression</option>
+        <!-- <option value="quantile">Quantile</option>
+        <option value="timeseries">Time Series</option> -->
+      </select>
+      <br>
+      <label for="eval_metric" data-tooltip="Choose the evaluation metric to measure the performance of your model." class="tooltip">Evaluation Metric:</label>
+      <select id="eval_metric" name="eval_metric" value="{{ task_form.get('eval_metric', '') }}" required>
+        <!-- Options will be populated by JavaScript -->
+      </select>
+      <br>
+      <div id="prediction_div" style="display: none;">
+        <label for="prediction" data-tooltip="Specify the type of prediction output (soft or hard, soft is probability, hard is label) for binary classification." class="tooltip">Prediction Type:</label>
+        <!-- <input type="text" id="prediction" name="prediction"> -->
+        <select id="prediction" name="prediction" value="{{ task_form.get('prediction', '') }}" >
+          <option value="soft">soft</option>
+          <option value="hard">hard</option>
+        </select>
+      </div>
+      <br>
+      <button type="submit"  data-tooltip="Click for next step."  class="tooltip">Next</button>
+    </form>
+    <script>
+      document.getElementById('task_form').addEventListener('submit', function() {
+          // Add the busy cursor class to the body
+          document.body.classList.add('busy-cursor');
+      });
+  </script>
+    <script>
+      const evalMetrics = {
+        'binary': ['accuracy', 'acc', 'balanced_accuracy', 'mcc', 'roc_auc_ovo_macro', 'log_loss', 'nll', 'pac', 'pac_score', 'quadratic_kappa', 'roc_auc', 'average_precision', 'precision', 'precision_macro', 'precision_micro', 'precision_weighted', 'recall', 'recall_macro', 'recall_micro', 'recall_weighted', 'f1', 'f1_macro', 'f1_micro', 'f1_weighted'],
+        'multiclass': ['accuracy', 'acc', 'balanced_accuracy', 'mcc', 'roc_auc_ovo_macro', 'log_loss', 'nll', 'pac', 'pac_score', 'quadratic_kappa', 'precision_macro', 'precision_micro', 'precision_weighted', 'recall_macro', 'recall_micro', 'recall_weighted', 'f1_macro', 'f1_micro', 'f1_weighted'],
+        'regression': ['r2', 'mean_squared_error', 'mse', 'root_mean_squared_error', 'rmse', 'mean_absolute_error', 'mae', 'median_absolute_error', 'mean_absolute_percentage_error', 'mape', 'symmetric_mean_absolute_percentage_error', 'smape', 'spearmanr', 'pearsonr'],
+
+      };
+      function updateEvalMetrics() {
+        const problemType = document.getElementById('problem_type').value;
+        const evalMetricSelect = document.getElementById('eval_metric');
+        evalMetricSelect.innerHTML = '';
+
+        evalMetrics[problemType].forEach(metric => {
+          const option = document.createElement('option');
+          option.value = metric;
+          option.text = metric;
+          evalMetricSelect.appendChild(option);
+        });
+
+        const predictionDiv = document.getElementById('prediction_div');
+        if (problemType === 'binary') {
+          predictionDiv.style.display = 'block';
+        } else {
+          predictionDiv.style.display = 'none';
+        }
+      }
+    </script>
+    <footer>
+      <h1>Glossary</h1>
+      <section>
+        <h2>Understanding Labels in Machine Learning</h2>
+        <p><strong>Labels</strong> are a crucial aspect of supervised learning in machine learning. They represent the output or the target variable that the model aims to predict. The label is what the model learns to map from the input features during the training process.</p>
+        <h3>Importance of Labels</h3>
+        <ul>
+          <li><strong>Guiding Model Training</strong>: Labels provide the necessary feedback for the model to learn the relationships between the input features and the target output.</li>
+          <li><strong>Evaluating Performance</strong>: Labels are essential for evaluating the model's performance. The model's predictions are compared against the true labels to calculate metrics like accuracy, precision, recall, etc.</li>
+        </ul>
+        <h3>Choosing the Right Labels</h3>
+        <ul>
+          <li><strong>Relevance</strong>: Ensure that the labels are directly related to the prediction task.</li>
+          <li><strong>Quality</strong>: High-quality labels are accurate and consistent, which is crucial for effective model training.</li>
+        </ul>
+        <h3>Example</h3>
+        <p>In a dataset for a binary classification problem, the label might be a column indicating whether an email is spam (1) or not spam (0). For regression, the label could be the price of a house.</p>
+        <h3>Conclusion</h3>
+        <p>Labels play a pivotal role in supervised learning, guiding the training process and allowing for the assessment of model performance. Properly defined and high-quality labels are key to building effective machine learning models.</p>
+      </section>
+      <section>
+        <h2>Understanding Problem Types in Machine Learning</h2>
+        <p><strong>Problem types</strong> in machine learning categorize the nature of the task to be performed by the model. Different problem types require different approaches and algorithms for effective modeling.</p>
+        <h3>Common Problem Types</h3>
+        <ul>
+          <li><strong>Binary Classification</strong>: Classifies data into two categories.</li>
+          <li><strong>Multiclass Classification</strong>: Classifies data into more than two categories.</li>
+          <li><strong>Regression</strong>: Predicts continuous numerical values.</li>
+          <li><strong>Quantile Regression</strong>: Predicts conditional quantiles of the target distribution.</li>
+          <li><strong>Time Series Forecasting</strong>: Predicts future values based on historical data.</li>
+        </ul>
+        <h3>Choosing the Right Problem Type</h3>
+        <p>Selection of the problem type depends on the nature of the data and the desired outcome of the analysis. Understanding the characteristics of each problem type is crucial for building effective machine learning models.</p>
+      </section>
+    
+      <section>
+        <h2>Understanding Evaluation Metrics in Machine Learning</h2>
+        <p><strong>Evaluation metrics</strong> are used to assess the performance of machine learning models. They provide quantitative measures of how well the model is performing on a given task.</p>
+        <h3>Types of Evaluation Metrics</h3>
+        <p>The choice of evaluation metric depends on the problem type and the specific requirements of the task. Common evaluation metrics include:</p>
+        <ul>
+          <li><strong>Accuracy</strong>: Measures the proportion of correctly classified instances.</li>
+          <li><strong>Precision</strong>: Measures the ratio of true positives to the sum of true positives and false positives.</li>
+          <li><strong>Recall</strong>: Measures the ratio of true positives to the sum of true positives and false negatives.</li>
+          <li><strong>F1 Score</strong>: Harmonic mean of precision and recall.</li>
+          <li><strong>Mean Squared Error (MSE)</strong>: Measures the average squared difference between the predicted and actual values.</li>
+          <li><strong>Root Mean Squared Error (RMSE)</strong>: Square root of the MSE.</li>
+          <li><strong>R-squared (R²)</strong>: Measures the proportion of the variance in the dependent variable that is predictable from the independent variables.</li>
+          <li><strong>Area Under the Curve (AUC)</strong>: Measures the area under the receiver operating characteristic (ROC) curve for binary classification.</li>
+        </ul>
+        <h3>Choosing the Right Evaluation Metric</h3>
+        <p>The selection of evaluation metric depends on the specific goals and requirements of the problem. It's essential to choose a metric that aligns with the objectives of the analysis and provides meaningful insights into model performance.</p>
+      </section>
+    </footer>
+
+    {% endblock %}
+  </body>
+</html>

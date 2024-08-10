@@ -1,0 +1,42 @@
+steps:
+# Step 1: Check if Dockerfile exists in the 'app' directory
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: 'check-dockerfile'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      if [ ! -f app/Dockerfile ]; then
+        echo "Dockerfile does not exist in the app directory."
+        exit 1
+      fi
+
+# Step 2: Build the Docker image
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'create-image'
+  args:
+    - 'build'
+    - '-t'
+    - 'us-west1-docker.pkg.dev/$PROJECT_ID/searchdocsapp/searchdocument:latest'
+    - '-f'
+    - 'app/Dockerfile'
+    - 'app'
+
+# Step 3: Push the Docker image to Artifact Registry
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'push-image'
+  args:
+    - 'push'
+    - 'us-west1-docker.pkg.dev/$PROJECT_ID/searchdocsapp/searchdocument:latest'
+
+# # Step 4: Authenticate and delete older images, keeping only the latest one
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   id: 'authenticate-and-delete-older-images'
+#   entrypoint: 'bash'
+#   args: [  # List of arguments passed to the bash script
+#     '-c',  # Flag to execute a command string
+#     # Script to list and delete older images
+#     'gcloud auth configure && gcloud container images list-tags us-west1-docker.pkg.dev/$_PROJECT_ID/automl-app/ui-app | grep -v ":latest" | awk "{print $3}" | head -n -1 | xargs gcloud container images delete -q'
+#   ]
+
+timeout: 1800s  # Timeout of 30 minutes

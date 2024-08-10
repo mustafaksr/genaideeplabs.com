@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Search Document App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #006400;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            color: #006400;
+        }
+        input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+            width: 200px;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #062006;
+        }
+        button[type="button"] {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="button"]:hover {
+            background-color: #062006;
+        }
+        .busy-cursor {
+            cursor: wait;
+        }
+        .flashes {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            margin: auto;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .flashes li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .flashes li.error {
+            background-color: #ffe5e5;
+            border-color: #ff6666;
+        }
+        .flashes li.success {
+            background-color: #e6ffe6;
+            border-color: #66ff66;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            width: 200px; /* Adjust as needed */
+            left: 50%;
+            bottom: 125%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        
+        .tooltip:hover::after {
+            opacity: 0.75;
+            visibility: visible;}
+      
+            /*footer style*/
+            footer {
+              text-align: left;
+              padding: 20px;
+              background-color: #f9f9f9;
+              border-top: 1px solid #ccc;
+              font-family: Arial, sans-serif;
+          }
+          .test-hover:hover {
+            background-color: #062006;
+        }
+    </style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+
+    {% block title %}Home{% endblock %}
+
+    {% block content %}
+
+    <!-- flash content -->
+    <div>{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+        <li class="{{ message.category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}</div> 
+    <!-- flash content -->
+
+
+    <h1>Welcome to the Search Document App</h1>
+    <hr>
+    <h2>Access to Search Document App</h2>
+    <form action="/" method="POST" id="user_data_form">
+        <label for="email">User Email:</label>
+        <input type="email" id="user_email" value="{{ user_data_form.get('user_email', '') }}" name="user_email" required><br><br>
+        <label for="password" data-tooltip="You can create from your profile's Application Passwords section. You need at least one Application Password created to access app." class="tooltip">User App Password:</label>
+        <input type="password" id="user_app_pass" name="user_app_pass" required><br><br>
+        <button type="submit" data-tooltip="Acces App. Reminder: If you return this page, you need to login app again." class="tooltip">Access APP</button>
+    </form><br>
+    <button type="button" data-tooltip="Create application password from your account." class="tooltip" onclick="redirectToApplicationPassword()">Create App Password</button><br>
+    <script>
+        document.getElementById('user_data_form').addEventListener('submit', function() {
+            // Add the busy cursor class to the body
+            document.body.classList.add('busy-cursor');
+        });
+    </script>
+    <script>
+        function redirectToApplicationPassword() {
+            window.location.href = "https://genaideeplabs.com/account2/#ApplicationPassword";
+        }
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

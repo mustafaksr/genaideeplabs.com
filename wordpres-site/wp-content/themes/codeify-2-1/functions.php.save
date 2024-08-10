@@ -1,0 +1,45 @@
+<?php
+// Enqueue custom scripts
+function enqueue_custom_scripts() {
+    wp_enqueue_script('openai-js', get_stylesheet_directory_uri() . '/js/openai.js', array('jquery'), null, true);
+    wp_localize_script('openai-js', 'openai_ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+// Handle AJAX request to communicate with Gemini API
+function handle_openai_request() {
+    $prompt = sanitize_text_field($_POST['prompt']);
+
+    $api_key = 'AIzaSyAm6tCv6TaG5w5fW3hfjuyPb6GyhywwM-A';
+    $url = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
+    $data = array(
+        'prompt' => $prompt,
+        'max_tokens' => 150
+    );
+
+    $headers = array(
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $api_key
+    );
+
+    $args = array(
+        'body'        => json_encode($data),
+        'headers'     => $headers,
+        'method'      => 'POST',
+        'data_format' => 'body',
+    );
+
+    $response = wp_remote_post( $url, $args );
+
+    if ( is_wp_error( $response ) ) {
+        echo 'Error contacting Gemini API';
+        wp_die();
+    } else {
+        $response_body = wp_remote_retrieve_body( $response );
+        $response_data = json_decode( $response_body, true );
+        echo $response_data['choices'][0]['text'];
+        wp_die();
+    }
+}
+add_action('wp_ajax_get_openai_response', 'handle_openai_request');
+add_action('wp_ajax_nopriv_get_openai_response', 'handle_openai_request');

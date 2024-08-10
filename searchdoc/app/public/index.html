@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="657422851026-f35gkct43283jq9toh678lsrlmbcoh4p.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <script>function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }</script>
+
+      
+      <a href="#" onclick="signOut();">Sign out</a>
+      <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+      </script>
+    <!-- Widget JavaScript bundle -->
+    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+
+    <!-- Search widget element is not visible by default -->
+    <gen-search-widget
+        configId="a2511b0b-6e92-4c63-9819-ceddf00fdc4b"
+        triggerId="searchWidgetTrigger">
+    </gen-search-widget>
+
+    <!-- Element that opens the widget on click. It does not have to be an input -->
+    <input placeholder="Search here" id="searchWidgetTrigger" />
+    <!-- Widget and autToken implementations are correct, problem related to domain name, as I understand, It doesn't work locally.-->>
+    <script>
+        const express = require('express');
+        const app = express();
+        const apiKey = process.env.API_KEY || "ya29.a0Ad52N381jaoF6zzyc-lXQJW-ZGqBIw0CJ00W9VL6cSuog84uY6kZR96n9jtmQetP6I5ywbeHAKRtnPW7HsCDTnTszPwPX12qZNzvoJHuS9escbDxcxUlhPC43e7cBbn4uRgAQgVmfEYsqs8vOTXY7C-myrWWnzPDj-hmaCgYKASMSARISFQHGX2MiPkB2FOnO2H4tsJk9XHZ80w0171";
+        const searchWidget = document.querySelector('gen-search-widget');
+        searchWidget.authToken = apiKey;
+    </script>
+</body>
+</html>

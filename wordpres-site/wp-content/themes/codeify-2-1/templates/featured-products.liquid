@@ -1,0 +1,12 @@
+<div class="featured-products">
+  <h2>Featured Products</h2>
+  {% for product in collections.frontpage.products %}
+    <div class="product-item">
+      <a href="{{ product.url }}">
+        <h3>{{ product.title }}</h3>
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        <p>{{ product.price | money }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>

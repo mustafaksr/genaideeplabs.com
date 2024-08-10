@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Summary</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f8f0;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
+      h1 {
+          color: #006400;
+      }
+      form {
+          margin-top: 20px;
+      }
+      label {
+          display: inline-block;
+          width: 150px;
+          text-align: right;
+          margin-right: 10px;
+          color: #006400;
+      }
+      input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+          width: 200px;
+          padding: 5px;
+          margin: 5px 0;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+      }
+      button[type="submit"] {
+          padding: 10px 20px;
+          background-color: #006400;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      button[type="submit"]:hover {
+          background-color: #062006;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px; /* Adjust as needed */
+        left: 50%;
+        bottom: 125%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .tooltip:hover::after {
+        opacity: 0.75;
+        visibility: visible;
+    }
+
+    /*footer style*/
+    footer {
+      text-align: left;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+    }
+    
+    footer section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    footer h2, footer h3 {
+        color: #333;
+    }
+    
+    footer p, footer ul, footer table {
+        color: #555;
+        line-height: 1.6;
+    }
+    
+    footer ul {
+        padding-left: 20px;
+    }
+    
+    footer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    
+    footer table th, footer table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    footer table th {
+        background-color: #f2f2f2;
+    }
+    
+    footer table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* Add this CSS to your stylesheet */
+
+
+.busy-cursor {
+    cursor: wait;
+}
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    margin: auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-top: 20px;
+}
+.flashes li {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.flashes li.error {
+    background-color: #ffe5e5;
+    border-color: #ff6666;
+}
+.flashes li.success {
+    background-color: #e6ffe6;
+    border-color: #66ff66;
+}
+  </style>
+  
+  </head>
+  <body>
+    
+    
+      {% extends "base.html" %}
+  
+      {% block title %}Summary{% endblock %}
+  
+      {% block content %}
+
+    <!-- flash content -->
+        <div>{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li class="{{ message.category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}</div> 
+    <!-- flash content -->
+
+
+
+    <h1>Summary</h1>
+    <hr>
+    <p>Job Name: {{ session.job_name }}</p>
+    <p>UUID: {{ session.uuid_str }}</p>
+    <p>Train Data Path: {{ session.train_data_path.split("/").pop() }}</p>
+    <p>Test Data Path: {{ session.test_data_path.split("/").pop() }}</p>
+    <p>Model Name: {{ session.model_name }}</p>
+    <p>Label: {{ session.label }}</p>
+    <p>Problem Type: {{ session.problem_type }}</p>
+    <p>Evaluation Metric: {{ session.eval_metric }}</p>
+    <p>Prediction Type: {{ session.prediction }}</p>
+    <p>Split Type: {{ session.split_type }}</p>
+    <p>Preprocess: {{ session.preprocess }}</p>
+    <p>Feature Engineering: {{ session.feature_engineering }}</p>
+    <p>Hypertuning: {{ session.hypertuning }}</p>
+    <p>Number of Trials: {{ session.num_trials }}</p>
+    <p>Machine Name: {{ session.machine_name }}, Machine Type: {{ session.machine_type }}, Disk Name: {{ session.disk_name }}, Disk Type: {{ session.disk_type }}, Disk Size: {{ session.disk_size }}GB, VM Zone: {{ session.zone }}</p>
+    <form action="{{ url_for('start_training') }}" method="post" id="summary_delete_form">
+      <button type="submit" data-tooltip="Click for starting training." class="tooltip">Start Training </button>
+    </form>
+   
+    <script>
+        document.getElementById('summary_delete_form').addEventListener('submit', function() {
+            // Add the busy cursor class to the body
+            document.body.classList.add('busy-cursor');
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                const flashMessages = document.querySelectorAll('.flash-message');
+                flashMessages.forEach(message => {
+                    message.classList.add('fade-out');
+                });
+            }, 3000); // Adjust the timeout duration as needed
+        });
+        </script>
+    <footer>
+      <h1>Summarization about selections</h1>
+      <section>
+        <p>You have selected the following options for your training process:</p>
+        <ul>
+          <li><strong>Train Data Path:</strong> {{ session.train_data_path }}</li>
+          <li><strong>Test Data Path:</strong> {{ session.test_data_path }}</li>
+          <li><strong>Model Name:</strong> {{ session.model_name }}</li>
+          <li><strong>Label:</strong> {{ session.label }}</li>
+          <li><strong>Problem Type:</strong> {{ session.problem_type }}</li>
+          <li><strong>Evaluation Metric:</strong> {{ session.eval_metric }}</li>
+          <li><strong>Prediction Type:</strong> {{ session.prediction }}</li>
+          <li><strong>Split Type:</strong> {{ session.split_type }} - This method determines how the data is split into training and testing sets.</li>
+          <li><strong>Preprocess:</strong> {{ session.preprocess }} - Indicates if preprocessing steps such as scaling and normalization are enabled.</li>
+          <li><strong>Feature Engineering:</strong> {{ session.feature_engineering }} - Indicates if automatic feature engineering is enabled to create new features from existing ones.</li>
+          <li><strong>Hypertuning:</strong> {{ session.hypertuning }} - Indicates if hyperparameter tuning is enabled to find the best model parameters.</li>
+          <li><strong>Number of Trials:</strong> {{ session.num_trials }} - Specifies the number of trials for hyperparameter tuning. More trials can lead to better performance but will take longer.</li>
+        </ul>
+        <p>These settings aim to optimize the training process based on your selected criteria and ensure the best possible model performance.</p>
+      </section>
+    </footer>
+
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Allow all bots to crawl your entire site
+User-agent: *
+Allow: /
+
+# Block specific bots
+User-agent: BadBot
+Disallow: /
+
+Sitemap: https://genaideeplabs.com/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK

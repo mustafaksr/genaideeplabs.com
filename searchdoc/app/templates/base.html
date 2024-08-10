@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AutoML App{% endblock %}</title>
+    <style >
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #006400;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            color: #006400;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        select,
+        input[type="number"],
+        input[type="checkbox"] {
+            width: 200px;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #006400;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            width: 200px;
+            left: 50%;
+            bottom: 125%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .tooltip:hover::after {
+            opacity: 0.75;
+            visibility: visible;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-button:hover {
+            background-color: #062006;
+        }
+        
+        .logout-container {
+            text-align: right;
+            margin-top: 10px; /* Adjust margin as needed */
+            margin-right: 15%;
+        }
+
+        /* footer style */
+        footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+
+        footer section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h2,
+        footer h3 {
+            color: #333;
+        }
+
+        footer p,
+        footer ul,
+        footer table {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer ul {
+            padding-left: 20px;
+        }
+
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        footer table th,
+        footer table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        footer table th {
+            background-color: #f2f2f2;
+        }
+
+        footer table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Header and navigation styles */
+        header {
+            background-color: #f0f8f0;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 4px;
+            /* Adjust this for spacing between each ul */
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: white;
+            background-color: #006400;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+            border: 1px solid black;
+            /* Add border color */
+            border-radius: 3px;
+            /* Adjust this for round corners */
+        }
+
+        nav ul li a:hover {
+            background-color: #062006;
+        }
+
+        nav ul li a::before,
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        nav ul li a::before {
+            top: 0;
+            left: -10px;
+            border-width: 20px 10px 20px 0;
+            border-right-color: #006400;
+        }
+
+        nav ul li a::after {
+            top: 0;
+            right: -10px;
+            border-width: 20px 0 20px 10px;
+            border-left-color: #006400;
+        }
+
+        nav ul li:first-child a::before {
+            display: none;
+        }
+
+        nav ul li:last-child a::after {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                margin: 10px 0; /* Adjust margin for spacing between items */
+            }
+            
+            nav ul li {
+                margin: 4px 0; /* Adjust margin for spacing between items */
+            }
+            
+            nav ul li a {
+                padding: 8px 20px; /* Adjust padding for smaller touch targets */
+            }
+            
+            .logout-container {
+                margin-right: 5%; /* Adjust margin for smaller screens */
+            }
+        }
+        
+    </style>
+    <style class="disabled"> 
+        
+       
+        nav ul li a::after {
+            top: 0;
+            right: -10px;
+            border-width: 20px 0 20px 10px;
+            border-left-color: #6a726a;
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}" title="Home">Access App</a></li>
+            </ul>
+            <ul>
+                <li><a href="{{ url_for('se_names') }}" {% if not completed_steps['se_names'] %} style="pointer-events: none;background-color: #6a726a;"  {% endif %} title="Define Search Engine Names Name">Search Engine Name</a></li>
+            </ul>
+            <ul>
+                <li><a href="{{ url_for('summary') }}" {% if not completed_steps['summary'] %} style="pointer-events: none;background-color: #6a726a;" {% endif %}
+                        title="Check Summary">Summary</a></li>
+            </ul>
+
+            <ul>
+
+                <li><a href="{{ url_for('search_app') }}" {% if not completed_steps['summary'] %}style="pointer-events: none;background-color: #6a726a;"{% endif %}
+                        title="Check Training Logs">Search App</a></li>
+            </ul>
+        </nav>
+        <br>
+        <!-- Logout button aligned to the right -->
+        <div class="logout-container">
+            <form action="{{ url_for('logout') }}" method="get">
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy;Doc Search App</p>
+    </footer>
+</body>
+
+</html>

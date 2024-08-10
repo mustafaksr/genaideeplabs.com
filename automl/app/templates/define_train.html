@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Define Train</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #006400;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            color: #006400;
+        }
+        input[type="file"], input[type="text"], select, input[type="number"], input[type="checkbox"] {
+            width: 200px;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #062006;
+        }
+        .tooltip {
+          position: relative;
+          display: inline-block;
+      }
+      
+      .tooltip::after {
+          content: attr(data-tooltip);
+          position: absolute;
+          background-color: black;
+          color: white;
+          padding: 5px;
+          border-radius: 5px;
+          width: 200px; /* Adjust as needed */
+          left: 50%;
+          bottom: 125%;
+          transform: translateX(-50%);
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s, visibility 0.3s;
+      }
+      
+      .tooltip:hover::after {
+          opacity: 0.75;
+          visibility: visible;}
+
+          /*footer style*/
+          footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+        
+        footer section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        footer h2, footer h3 {
+            color: #333;
+        }
+        
+        footer p, footer ul, footer table {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        footer ul {
+            padding-left: 20px;
+        }
+        
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        footer table th, footer table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        footer table th {
+            background-color: #f2f2f2;
+        }
+        
+        footer table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .busy-cursor {
+            cursor: wait;
+        }
+        .flashes {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+            margin: auto;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .flashes li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .flashes li.error {
+            background-color: #ffe5e5;
+            border-color: #ff6666;
+        }
+        .flashes li.success {
+            background-color: #e6ffe6;
+            border-color: #66ff66;
+        }
+    </style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+
+    {% block title %}Define Train{% endblock %}
+
+    {% block content %}
+
+        <!-- flash content -->
+             <div>{% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <ul class="flashes">
+                  {% for message in messages %}
+                  <li class="{{ message.category }}">{{ message }}</li>
+                  {% endfor %}
+              </ul>
+              {% endif %}
+              {% endwith %}</div> 
+              <!-- flash content -->
+        
+    <h1>Define Train</h1>
+    <hr>
+    <form action="{{ url_for('define_train') }}" method="post" id="train_form">
+      <label for="split_type" data-tooltip="Choose the method to split your data. Train/Test for basic splits, KFold for cross-validation." class="tooltip">Split Type:</label>
+      <select id="split_type" name="split_type" value="{{ train_form.get('split_type', '') }}" required>
+        <option value="train_test">Train/Test</option>
+        <option value="KFold">KFold</option>
+        <option value="StratifiedKFold">Stratified KFold</option>
+        <!-- <option value="GroupKFold">Group KFold</option>
+        <option value="StratifiedGroupKFold">Stratified Group KFold</option> -->
+      </select>
+      <br>
+      <label for="preset" data-tooltip="Select a preset configuration that optimizes for different criteria, such as quality or deployment." class="tooltip">Preset:</label>
+        <select id="preset" name="preset" value="{{ train_form.get('preset', '') }}" required>
+        <option value="best_quality">Best Quality</option>
+        <option value="high_quality">High Quality</option>
+        <option value="good_quality">Good Quality</option>
+        <option value="medium_quality">Medium Quality</option>
+        <option value="optimize_for_deployment">Optimize for Deployment</option>
+        <option value="interpretable">Interpretable</option>
+        <option value="ignore_text">Ignore Text</option>
+        </select>
+
+      <br>
+      <label for="preprocess" data-tooltip="Enable data preprocessing steps such as scaling and normalization."  class="tooltip">Preprocess Data:</label>
+      <input type="checkbox" id="preprocess"  name="preprocess">
+      <br>
+      <label for="feature_engineering" data-tooltip="Enable automatic feature engineering to create new features from existing ones."  class="tooltip">Feature Engineering:</label>
+      <input type="checkbox" id="feature_engineering" name="feature_engineering">
+      <br>
+      <label for="hypertuning" data-tooltip="Enable hyperparameter tuning to find the best model parameters."  class="tooltip">Hypertuning:</label>
+      <input type="checkbox" id="hypertuning" name="hypertuning">
+      <br>
+      <label for="num_trials" data-tooltip="Specify the number of trials for hyperparameter tuning. More trials may result in better performance but take longer."  class="tooltip">Number of Trials:</label>
+      <input type="number" id="num_trials" value="{{ train_form.get('num_trials', '') }}" name="num_trials" min="1" value="1" required>
+      <br>
+      <br>
+      <label for="time_limit" data-tooltip="Set a time limit in seconds for the training process."  class="tooltip">Time Limit:</label>
+      <input type="number" id="time_limit" value="{{ train_form.get('time_limit', '') }}" name="time_limit"  min="10" value="10" max="30" required>
+      <br>
+      <button type="submit"  data-tooltip="Click for next step."  class="tooltip">Next</button>
+    </form>
+
+    <script>
+        document.getElementById('train_form').addEventListener('submit', function() {
+            // Add the busy cursor class to the body
+            document.body.classList.add('busy-cursor');
+        });
+    </script>
+
+    <footer>
+      <h1>Glossary</h1>
+      <section>
+          <h2>Glossary of Terms</h2>
+          <h3>Split Type</h3>
+          <p>The method used to divide your data into training and testing sets. Common methods include:</p>
+          <ul>
+              <li><strong>Train/Test</strong>: A simple split into training and testing datasets.</li>
+              <li><strong>KFold</strong>: Splits the data into K number of folds for cross-validation.</li>
+              <li><strong>Stratified KFold</strong>: Ensures that each fold has the same proportion of classes as the original dataset.</li>
+              <li><strong>Group KFold</strong>: Ensures that the same group is not represented in both the training and the testing sets.</li>
+              <li><strong>Stratified Group KFold</strong>: Combines stratified and group KFold methods.</li>
+          </ul>
+          <h3>Preset</h3>
+          <p>Pre-configured settings that optimize for different aspects such as model quality, deployment readiness, and interpretability.</p>
+          <ul>
+              <li><strong>Best Quality</strong>: Maximizes model performance.</li>
+              <li><strong>High Quality</strong>: Slightly balances quality with other factors.</li>
+              <li><strong>Good Quality</strong>: More balanced between performance and speed.</li>
+              <li><strong>Medium Quality</strong>: Even more balanced, typically faster.</li>
+              <li><strong>Optimize for Deployment</strong>: Focuses on creating a model that is easy to deploy.</li>
+              <li><strong>Interpretable</strong>: Creates a model that is easier to understand.</li>
+              <li><strong>Ignore Text</strong>: Ignores text features in the dataset.</li>
+          </ul>
+          <h3>Preprocess Data</h3>
+          <p>Steps taken to clean and prepare data for modeling, such as normalization, handling missing values, and scaling.</p>
+          <h3>Feature Engineering</h3>
+          <p>The process of creating new features from existing data to improve model performance.</p>
+          <h3>Hypertuning</h3>
+          <p>The process of finding the optimal parameters for a machine learning model to improve its performance.</p>
+          <h3>Number of Trials</h3>
+          <p>The number of different combinations of hyperparameters that will be tried during hypertuning.</p>
+          <h3>Time Limit</h3>
+          <p>The maximum amount of time (in minutes) allocated for the training process.</p>
+      </section>
+  </footer>
+  {% endblock %}
+  </body>
+</html>

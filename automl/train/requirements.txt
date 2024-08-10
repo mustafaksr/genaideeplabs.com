@@ -1,0 +1,16 @@
+autogluon.tabular 
+openfe 
+pandas
+numpy
+scikit-learn
+scipy
+ipython
+fire
+# torch
+# xgboost
+# catboost
+# fastai
+google-cloud-storage==2.14.0
+fsspec==2024.2.0
+gcsfs==2024.2.0
+google-cloud-pubsub

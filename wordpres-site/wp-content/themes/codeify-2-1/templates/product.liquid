@@ -1,0 +1,12 @@
+<div class="product">
+  <h1>{{ product.title }}</h1>
+  <div class="product-image">
+    <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+  </div>
+  <div class="product-description">
+    {{ product.description }}
+  </div>
+  <div class="product-price">
+    {{ product.price | money }}
+  </div>
+</div>

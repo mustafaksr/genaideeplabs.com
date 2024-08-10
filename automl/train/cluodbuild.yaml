@@ -1,0 +1,56 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    if gcloud compute instances describe temp-vm --project=$PROJECT_ID --zone=us-west4-c &> /dev/null; then
+      echo "VM temp-vm already exists, deleting..."
+      gcloud compute instances delete temp-vm --project=$PROJECT_ID --zone=us-west4-c --quiet
+    fi
+    gcloud compute instances create temp-vm \
+      --project=$PROJECT_ID \
+      --zone=us-west4-c \
+      --machine-type=n1-standard-2 \
+      --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
+      --maintenance-policy=MIGRATE \
+      --provisioning-model=STANDARD \
+      --service-account=657422851026-compute@developer.gserviceaccount.com \
+      --scopes=https://www.googleapis.com/auth/cloud-platform \
+      --tags=http-server,https-server \
+      --create-disk=auto-delete=yes,boot=yes,device-name=instance-20240623-104111,image=projects/$PROJECT_ID/global/images/ubuntu24-autogluon-automl-sysd9,mode=rw,size=50,type=projects/$PROJECT_ID/zones/us-west4-c/diskTypes/pd-balanced \
+      --no-shielded-secure-boot \
+      --shielded-vtpm \
+      --shielded-integrity-monitoring \
+      --labels=goog-ec-src=vm_add-gcloud \
+      --reservation-affinity=any
+  id: 'create-vm'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      apt-get update && \
+      apt-get install -y wget && \
+      wget --header="Authorization: token ${_GITHUB_TOKEN}" -O ./train.py https://raw.githubusercontent.com/mustafaksr/AutoML-App/main/train/train.py && \
+      gcloud compute scp ./train.py temp-vm:/home/mustafakeser --zone=us-west4-c && \
+      wget --header="Authorization: token ${_GITHUB_TOKEN}" -O ./startup_script_ubuntu.sh https://raw.githubusercontent.com/mustafaksr/AutoML-App/main/train/startup_script_ubuntu.sh && \
+      gcloud compute scp ./startup_script_ubuntu.sh temp-vm:/home/mustafakeser --zone=us-west4-c
+  id: 'install-download-and-copy'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'instances', 'stop', 'temp-vm', '--zone=us-west4-c']
+  id: 'stop-vm'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'images', 'delete', 'ubuntu24-autogluon-automl-sysd9', '--project=$PROJECT_ID', '--quiet']
+  id: 'delete-old-image'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'images', 'create', 'ubuntu24-autogluon-automl-sysd9', '--source-disk=temp-vm', '--source-disk-zone=us-west4-c']
+  id: 'create-image'
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'instances', 'delete', 'temp-vm', '--zone=us-west4-c', '--quiet']
+  id: 'delete-vm'

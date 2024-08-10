@@ -1,0 +1,3728 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: miniOrange 2 Factor Authentication\n"
+"POT-Creation-Date: 2018-07-19 22:39+0530\n"
+"PO-Revision-Date: 2023-04-21 07:33+0000\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;mo2f_lt\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: views/twofa/two-fa-login-option.php:115
+msgid "\tI want to hide default login form."
+msgstr "\tI хочу скрыть стандартную форму входа."
+
+#: views/twofa/two-fa-session-control.php:38
+msgid ""
+" All other sessions would be destroyed except the current session after "
+"saving the settings"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:67
+msgid " Checking this option will display an option "
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:65
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:199
+#: views/twofa/setup/setup-google-authenticator.php:90
+msgid " Enter account name "
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:62
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:196
+#: views/twofa/setup/setup-google-authenticator.php:87
+msgid " Enter provided key "
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:69
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:203
+#: views/twofa/setup/setup-google-authenticator.php:94
+msgid " Enter your key "
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:40
+#, fuzzy
+#| msgid "Give users an option to enable"
+msgid " Give users an option to enable"
+msgstr "Дайте пользователям возможность включить"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:83
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:217
+#: views/twofa/setup/setup-google-authenticator.php:108
+msgid " is selected"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1709
+msgid " message"
+msgstr ""
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:152
+msgid " miniOrange Authenticator"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:208
+#: handler/class-registrationhandler.php:95
+msgid " not Found. Please check Selector"
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:59
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:193
+#: views/twofa/setup/setup-google-authenticator.php:84
+msgid " Set up account "
+msgstr ""
+
+#: views/twofa/two-fa-shortcode.php:29
+msgid ""
+" This shortcode provides 'Enable Remember Device' from your custom login "
+"form."
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1046
+msgid ""
+" This shortcode provides'Enable Remember Device' from your custom login form."
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:82
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:216
+#: views/twofa/setup/setup-google-authenticator.php:107
+msgid " Time-based "
+msgstr ""
+
+#: views/upgrade.php:1261
+msgid ""
+" You will be redirected to the miniOrange Console. Enter your miniOrange "
+"username and password, after which you will be redirected to the payment "
+"page."
+msgstr ""
+" Вы будете перенаправлены на консоль miniOrange. Введите имя пользователя и "
+"пароль miniOrange, после чего вы будете перенаправлены на страницу оплаты."
+
+#. %s: bold tags
+#: views/upgrade.php:1321
+#, php-format
+msgid ""
+"%1$1sRefund Policy : %2$2sAt miniOrange, we want to ensure you are 100%% "
+"happy with your purchase. If the premium plugin you purchased is not working "
+"as advertised and you've attempted to resolve any issues with our support "
+"team, which couldn't get resolved then we will refund the whole amount "
+"within 10 days of the purchase. "
+msgstr ""
+
+#. %s: bold tags
+#: views/upgrade.php:1335
+#, php-format
+msgid ""
+"%1$1sSMS Charges : %2$2sIf you wish to choose OTP Over SMS/OTP Over SMS and "
+"Email as your authentication method,\n"
+"\tSMS transaction prices & SMS delivery charges apply and they depend on "
+"country. SMS validity is for lifetime."
+msgstr ""
+
+#. %s: bold tags and links
+#: views/upgrade.php:1392
+#, php-format
+msgid ""
+"%1$sContact Us : %2$sIf you have any doubts regarding the licensing plans, "
+"you can mail us at %3$sinfo@xecurify.com%4$s or submit a query using the "
+"support form."
+msgstr ""
+
+#. %s: bold tags and links
+#: views/upgrade.php:1372
+#, php-format
+msgid ""
+"%1$sEnd User License Agreement : %2$2s %3$3sClick Here%4$4s to read our End "
+"User License Agreement."
+msgstr ""
+
+#. %s: bold tags
+#: views/upgrade.php:1354
+#, php-format
+msgid ""
+"%1$sMultisite : %2$sFor your first license 3 subsites will be activated "
+"automatically on the same domain. And if you wish to use it for more please "
+"contact support "
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:148
+msgid "(Any TOTP Based Authenticatior App)"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:420
+msgid ""
+") to create AUTH API application on duo side. After creating auth API, you "
+"will get the all credentials which you need to enter below."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:3186
+#, fuzzy
+#| msgid "Please enter the OTP to verify your identity."
+msgid ". Please enter the OTP to verify your identity."
+msgstr "Пожалуйста, введите одноразовый код, чтобы подтвердить свою личность."
+
+#: handler/twofa/class-mo2fconstants.php:474
+#, fuzzy
+#| msgid "Please enter the OTP you received to Validate."
+msgid ". Please enter the OTP you received to Validate."
+msgstr ""
+"Пожалуйста, введите одноразовый код, который вы получили для подтверждения."
+
+#: views/twofa/setup/setup-duo-authenticator.php:416
+msgid "1. If you do not have an account in duo, please"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1707
+msgid ""
+"1. Open the telegram app and search for miniorange2fa_bot. Click on start "
+"button or send "
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:20
+msgid "1. Remember Device"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2927
+#, fuzzy
+#| msgid "2-Factor Authentication App."
+msgid "2 Factor Authentication code*"
+msgstr "Приложение для двух факторной аутентификации."
+
+#: handler/user-profile-2fa.php:81
+msgid "2-Factor Options"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1711
+msgid "2. Enter the recieved Chat ID here below::"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:420
+msgid "2. Follow these steps( "
+msgstr ""
+
+#: handler/twofa/class-miniorange-authentication.php:491
+msgid "2FA via Telegram"
+msgstr ""
+
+#: views/twofa/two-fa-shortcode.php:83
+msgid "5. IP Restriction: Limit users to login from specific IPs"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1449
+msgid "<< Back to Menu"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:3186
+#, fuzzy
+#| msgid "A one time passcode has been sent to"
+msgid "A one time passcode has been sent to "
+msgstr "Одноразовый код был отправлен на"
+
+#: handler/twofa/class-mo2fconstants.php:384
+msgid "A Push notification has been sent to your miniOrange Authenticator App."
+msgstr ""
+"Уведомление Push было отправлено в ваше приложение для аутентификации "
+"miniOrange."
+
+#: views/twofa/test/test-twofa-miniorange-push-notification.php:25
+msgid "A Push Notification has been sent to your phone."
+msgstr "На ваш телефон отправлено Push-уведомление."
+
+#: handler/twofa/class-mo2fconstants.php:423
+msgid "A verification email is sent to"
+msgstr "Письмо с подтверждением отправляется"
+
+#: views/twofa/test/test-twofa-email-verification.php:30
+msgid "A verification email is sent to your registered email."
+msgstr "Письмо с подтверждением отправлено на ваш зарегистрированный Email."
+
+#: controllers/twofa/mo2fa-common-login.php:604
+#: controllers/twofa/mo2fa-common-login.php:805
+msgid "Accept Your Transaction"
+msgstr "Примите свою транзакцию"
+
+#: views/twofa/two-fa-rba.php:66
+msgid "Action on exceeding device limit:"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1021
+msgid ""
+"Activate\n"
+"                        Plugin"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:958
+msgid "Activate Plugin"
+msgstr ""
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:183
+msgid "Add Account"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:422
+#: views/twofa/two-fa-login-option.php:498
+msgid ""
+"Add up to 16 Custom Security Questions for Knowledge based authentication "
+"(KBA). You also have the option to select how many standard and custom "
+"questions should be shown to the users"
+msgstr ""
+
+#. %s: bold tags
+#: views/upgrade.php:1267
+#, fuzzy
+#| msgid ""
+#| "After making the payment, you can find the Premium plugin to download "
+#| "from the 'License' tab in the left navigation bar of the miniOrange "
+#| "Console."
+msgid ""
+"After making the payment, you can find the respective %1$1splugins%2$2s to "
+"download from the %3$3sLicense%4$4s tab in the left navigation bar of the "
+"miniOrange Console."
+msgstr ""
+"После внесения платежа вы можете найти плагин Premium для загрузки со "
+"вкладки «Лицензия» на левой панели навигации консоли miniOrange."
+
+#: views/twofa/setup/setup-duo-authenticator.php:183
+msgid ""
+"After registration if you have not received  authenticate request yet, "
+"please click on "
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:122
+msgid ""
+"After registration if you have not received  authenticate requestyet, please "
+"click on "
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:85
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:236
+#: views/twofa/setup/setup-google-authenticator.php:127
+msgid ""
+"After you have scanned the QR code and created an account, enter the "
+"verification code from the scanned account here."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:341
+msgid "All done"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:523
+#: handler/twofa/class-miniorange-password-2factor-login.php:769
+#: handler/twofa/class-miniorange-password-2factor-login.php:785
+#: handler/twofa/class-mo2fconstants.php:246
+msgid "All the fields are required. Please enter valid entries."
+msgstr "Все поля обязательны. Введите корректные данные."
+
+#: views/class-mo2f-setup-wizard.php:391
+msgid "All users"
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:56
+msgid "Allow"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:203
+#: handler/class-registrationhandler.php:90
+msgid "Already Validated"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:186
+msgid "Alternate email cannot be same as primary email."
+msgstr ""
+"Альтернативный адрес электронной почты не может совпадать с основным "
+"электронным письмом."
+
+#: handler/twofa/class-mo2fconstants.php:465
+msgid ""
+"An error occured while creating your account. Please try again by sending "
+"OTP again."
+msgstr ""
+"Произошла ошибка при создании вашей учетной записи. Повторите попытку, снова "
+"отправив одноразовый код."
+
+#: handler/twofa/class-mo2fconstants.php:279
+msgid ""
+"An error occured while processing your request. Please check your SMTP "
+"server is configured."
+msgstr ""
+
+#: handler/user-profile-2fa.php:185
+#: handler/twofa/class-miniorange-password-2factor-login.php:1067
+#: handler/twofa/class-miniorange-password-2factor-login.php:1182
+#: handler/twofa/class-mo2fconstants.php:276
+msgid "An error occured while processing your request. Please Try again."
+msgstr ""
+"Во время обработки вашего запроса произошла ошибка. Пожалуйста, попробуйте "
+"снова."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:1179
+msgid ""
+"An error occured while setting up Google/Authy Authenticator. Please Try "
+"again."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:729
+#: handler/twofa/class-miniorange-password-2factor-login.php:909
+#: handler/twofa/class-miniorange-password-2factor-login.php:1188
+msgid "An error occured while validating the user. Please Try again."
+msgstr ""
+"При проверке пользователя произошла ошибка. Пожалуйста, попробуйте снова."
+
+#: miniorange_2_factor_settings.php:202
+#: handler/class-registrationhandler.php:89
+msgid "An OTP will be sent to your Email ID"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:200
+#: handler/class-registrationhandler.php:87
+msgid "An OTP will be sent to your Mobile Number"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:201
+#: handler/class-registrationhandler.php:88
+msgid "An OTP will be sent to your Mobile Number and Email"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:141
+msgid "An unknown error occurred while challenging the user."
+msgstr "Произошла неизвестная ошибка при вызове пользователя."
+
+#: handler/twofa/class-mo2fconstants.php:138
+msgid "An unknown error occurred while creating the end user."
+msgstr "При завершении создания пользователя произошла неизвестная ошибка."
+
+#: handler/twofa/class-mo2fconstants.php:144
+msgid ""
+"An unknown error occurred while generating QR Code for registering mobile."
+msgstr ""
+"Произошла неизвестная ошибка при создании QR-кода для регистрации мобильного "
+"телефона."
+
+#: handler/twofa/class-mo2fconstants.php:147
+msgid "An unknown error occurred while validating the user's identity."
+msgstr "При проверке личности пользователя произошла неизвестная ошибка."
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:22
+#, fuzzy
+#| msgid " and "
+msgid "and "
+msgstr " и "
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:23
+msgid "and click on"
+msgstr "и нажмите на"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1002
+#: controllers/twofa/mo2fa-inline-registration.php:1008
+#: controllers/twofa/mo2fa-inline-registration.php:1013
+#: controllers/twofa/mo2fa-inline-registration.php:1018
+#: controllers/twofa/mo2fa-inline-registration.php:1023
+#: controllers/twofa/mo2fa-inline-registration.php:1028
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:292
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:306
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:312
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:317
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:322
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:327
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:332
+#: views/twofa/setup/setup-google-authenticator.php:173
+#: views/twofa/setup/setup-google-authenticator.php:179
+#: views/twofa/setup/setup-google-authenticator.php:184
+#: views/twofa/setup/setup-google-authenticator.php:189
+#: views/twofa/setup/setup-google-authenticator.php:194
+#: views/twofa/setup/setup-google-authenticator.php:199
+msgid "Android Play Store"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:296
+#: views/twofa/setup/setup-duo-authenticator.php:370
+#: views/twofa/setup/setup-miniorange-authenticator.php:142
+msgid "Android Users"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:336
+msgid "Another One Time Passcode has been sent"
+msgstr "Был отправлен еще один одноразовый код"
+
+#: controllers/twofa/mo2fa-common-login.php:249
+msgid "Answer your Security Questions (KBA)"
+msgstr "Ответьте на свои секретные вопросы"
+
+#: controllers/twofa/class-mo-2f-ajax.php:523
+#: views/twofa/setup/setup-kba-questions.php:31
+#, fuzzy
+#| msgid "Answer"
+msgid "Answers"
+msgstr "Ответ"
+
+#: views/twofa/setup/setup-duo-authenticator.php:439
+#: views/twofa/setup/setup-duo-authenticator.php:441
+msgid "API Hostname"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:601
+#: controllers/twofa/mo2fa-inline-registration.php:711
+#: views/twofa/setup/setup-duo-authenticator.php:269
+msgid "App"
+msgstr "Приложение"
+
+#: views/twofa/setup/setup-duo-authenticator.php:307
+#: views/twofa/setup/setup-duo-authenticator.php:381
+#: views/twofa/setup/setup-miniorange-authenticator.php:153
+#, fuzzy
+#| msgid "app."
+msgid "app"
+msgstr "приложение."
+
+#: views/twofa/setup/setup-duo-authenticator.php:288
+#: views/twofa/setup/setup-duo-authenticator.php:362
+#: views/twofa/setup/setup-miniorange-authenticator.php:134
+#, fuzzy
+#| msgid " app."
+msgid "app "
+msgstr " приложение."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1100
+msgid "app and click on"
+msgstr "приложение и нажмите на"
+
+#: views/twofa/two-fa-rba.php:38
+#, fuzzy
+#| msgid "Applicable only with "
+msgid "Applicable only for "
+msgstr "Применимо только с "
+
+#: controllers/twofa/mo2fa-inline-registration.php:1590
+msgid "as your 2nd factor method of authentication."
+msgstr "как ваш двухфакторный метод аутентификации."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1589
+msgid "as your Two Factor method."
+msgstr "как свой двухфакторный метод входа."
+
+#: handler/user-profile-2fa.php:278 handler/user-profile-2fa.php:295
+msgid "Authentication codes will be sent to "
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:360
+msgid "Authentication failed. Please try again to test the configuration."
+msgstr ""
+"Ошибка аутентификации. Повторите попытку, чтобы проверить конфигурацию."
+
+#: controllers/twofa/mo2fa-inline-registration.php:601
+#: controllers/twofa/mo2fa-inline-registration.php:711
+#: controllers/twofa/mo2fa-inline-registration.php:1100
+#: views/twofa/setup/setup-duo-authenticator.php:269
+#: views/twofa/setup/setup-duo-authenticator.php:287
+#: views/twofa/setup/setup-duo-authenticator.php:306
+#: views/twofa/setup/setup-duo-authenticator.php:343
+#: views/twofa/setup/setup-duo-authenticator.php:361
+#: views/twofa/setup/setup-duo-authenticator.php:380
+msgid "Authenticator"
+msgstr "Authenticator"
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:23
+msgid "Authenticator App"
+msgstr "Приложение аутентификации"
+
+#: views/twofa/two-fa-premium-feature.php:165
+msgid "AUTHY 2-FACTOR AUTHENTICATION"
+msgstr "Аутентификация через приложение Authy 2-Factor"
+
+#: controllers/twofa/mo2fa-inline-registration.php:278
+#: handler/twofa/class-mo2fconstants.php:135
+msgid "Authy 2-Factor Authentication"
+msgstr "Аутентификация через приложение Authy 2-Factor"
+
+#: handler/twofa/class-mo2fconstants.php:48
+msgid "Authy Authenticator"
+msgstr "Authy Authenticator"
+
+#: controllers/twofa/mo2fa-common-login.php:1305
+#: controllers/twofa/mo2fa-inline-registration.php:615
+#: controllers/twofa/mo2fa-inline-registration.php:731
+#: controllers/twofa/mo2fa-inline-registration.php:972
+#: controllers/twofa/mo2fa-inline-registration.php:1120
+#: controllers/twofa/mo2fa-inline-registration.php:1194
+#: controllers/twofa/mo2fa-inline-registration.php:1780
+#: views/twofa/setup/setup-authy-authenticator.php:43
+#: views/twofa/setup/setup-duo-authenticator.php:56
+#: views/twofa/setup/setup-duo-authenticator.php:141
+#: views/twofa/setup/setup-duo-authenticator.php:316
+#: views/twofa/setup/setup-duo-authenticator.php:445
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:254
+#: views/twofa/setup/setup-google-authenticator.php:144
+#: views/twofa/setup/setup-kba-questions.php:206
+#: views/twofa/setup/setup-otp-over-sms.php:64
+#: views/twofa/setup/setup-otp-over-telegram.php:59
+#: views/twofa/test/test-twofa-duo-authenticator.php:32
+#: views/twofa/test/test-twofa-email-verification.php:37
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:51
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:102
+#: views/twofa/test/test-twofa-kba-questions.php:54
+#: views/twofa/test/test-twofa-miniorange-push-notification.php:31
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:65
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:35
+#: views/twofa/test/test-twofa-otp-over-sms.php:37
+#: views/twofa/test/test-twofa-otp-over-telegram.php:35
+msgid "Back"
+msgstr "Назад"
+
+#: controllers/twofa/mo2fa-common-login.php:37
+#: controllers/twofa/mo2fa-common-login.php:223
+#: controllers/twofa/mo2fa-common-login.php:327
+#: controllers/twofa/mo2fa-common-login.php:501
+#: controllers/twofa/mo2fa-common-login.php:602
+#: controllers/twofa/mo2fa-common-login.php:802
+#: controllers/twofa/mo2fa-common-login.php:1055
+#: controllers/twofa/mo2fa-common-login.php:1250
+#: controllers/twofa/mo2fa-common-login.php:1552
+#: controllers/twofa/mo2fa-inline-registration.php:105
+#: controllers/twofa/mo2fa-inline-registration.php:493
+#: controllers/twofa/mo2fa-inline-registration.php:600
+#: controllers/twofa/mo2fa-inline-registration.php:710
+#: controllers/twofa/mo2fa-inline-registration.php:872
+#: controllers/twofa/mo2fa-inline-registration.php:1290
+#: controllers/twofa/mo2fa-inline-registration.php:1384
+#: controllers/twofa/mo2fa-inline-registration.php:1520
+#: controllers/twofa/mo2fa-inline-registration.php:1663
+msgid "Back to login"
+msgstr "Вернуться на страницу входа"
+
+#: views/twofa/two-fa-custom-login.php:131
+msgid "Background Color:"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:302
+msgid "Backup code has not generated for you."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:532
+msgid "Backup Codes"
+msgstr "Коды резервных копий"
+
+#: controllers/twofa/mo2fa-common-login.php:1577
+msgid ""
+"Backup Codes can be used to login into user account in case you forget your "
+"phone or get locked out."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:137
+msgid "Backup Methods"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:348
+#: views/twofa/two-fa-login-option.php:516
+msgid "Backup Options"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:139
+msgid "Button Color:"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1767
+msgid "CALL AGAIN"
+msgstr "ПОЗВОНИТЬ ПОВТОРНО"
+
+#: controllers/twofa/mo2fa-inline-registration.php:934
+msgid "Can't scan the barcode?"
+msgstr "Не удается отсканировать штрих-код?"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:54
+#: views/twofa/setup/setup-google-authenticator.php:79
+msgid "Can't scan the barcode? "
+msgstr "Не удается отсканировать штрих-код? "
+
+#: views/twofa/setup/setup-authy-authenticator.php:60
+msgid "Can't scan the QR Code?"
+msgstr "Не удается проверить QR-код?"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:188
+#, fuzzy
+#| msgid "Cant scan the QR Code?"
+msgid "Can't scan the QR code? "
+msgstr "Не удается проверить QR-код?"
+
+#: views/twofa/two-fa-custom-login.php:45
+msgid "Change Plugin Icon."
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:59
+msgid "Change Plugin Name:"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:100
+msgid ""
+"Checking this option will add login with your phone button below default "
+"login form. Click above link to see the preview."
+msgstr ""
+"Проверка этого параметра добавит логин кликом по кнопке с Вашим телефоном "
+"ниже формы входа по умолчанию. Нажмите ссылку выше, чтобы просмотреть "
+"предварительный просмотр."
+
+#: views/twofa/two-fa-rba.php:74
+msgid "Checking this option will enable"
+msgstr "Проверка этого параметра позволит включить"
+
+#: views/twofa/two-fa-login-option.php:131
+msgid ""
+"Checking this option will hide default login form and just show login with "
+"your phone. Click above link to see the preview."
+msgstr ""
+"При проверке этого параметра будет скрыта форма входа в систему по умолчанию "
+"и вы можете войти через стандартную форму на своем телефоне. Нажмите ссылку "
+"выше для  предварительного просмотра."
+
+#: handler/twofa/class-mo2fconstants.php:327
+#, fuzzy
+#| msgid "Choose a password with minimum length 8."
+msgid "Choose a password with minimum length 6."
+msgstr "Выберите пароль с минимальной длиной 8 символов."
+
+#: views/class-mo2f-setup-wizard.php:331
+msgid "Choose User roles"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1595
+#: handler/twofa/class-mo2fconstants.php:462
+msgid "Click Here"
+msgstr "Нажмите тут"
+
+#: handler/twofa/class-mo2f-cloud-onprem-interface.php:46 api/class-two-factor-setup.php:65
+msgid "Click here"
+msgstr "Кликните сюда"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1102
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:30
+msgid "click here "
+msgstr "кликните сюда "
+
+#: controllers/twofa/mo2fa-inline-registration.php:1112
+#: views/twofa/setup/setup-miniorange-authenticator.php:210
+msgid "Click here to Refresh QR Code."
+msgstr "Нажмите тут для предзагрузки QR Кода."
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:183
+#, fuzzy
+#| msgid "Click on"
+msgid "click on"
+msgstr "Нажмите на"
+
+#. %s: bold tags
+#: views/upgrade.php:1255
+#, fuzzy
+#| msgid "Click on 'Upgrade' button of your preferred plan above."
+msgid "Click on %1$1sUpgrade Now%2$2s button of your preferred plan above."
+msgstr "Нажмите кнопку «Обновить» вашего предпочтительного плана выше."
+
+#: views/class-mo2f-setup-wizard.php:254 views/class-mo2f-setup-wizard.php:287
+msgid "Close wizard"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:300
+msgid "Close wizard & configure 2FA later"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:960
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:239
+#: views/twofa/setup/setup-google-authenticator.php:130
+msgid "Code:"
+msgstr "Код:"
+
+#: views/twofa/setup/setup-authy-authenticator.php:31
+msgid "Configure"
+msgstr "Конфигурировать"
+
+#: views/class-mo2f-setup-wizard.php:297
+msgid "Configure 2FA for yourself"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:112
+msgid "Configure a Two-Factor method to protect your account"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1100
+msgid "Configure button"
+msgstr "Кнопка конфигурирования"
+
+#: views/twofa/setup/setup-otp-over-sms.php:31
+msgid "Configure OTP over SMS"
+msgstr ""
+
+#: views/twofa/setup/setup-otp-over-telegram.php:28
+msgid "Configure OTP over Telegram"
+msgstr ""
+
+#: views/twofa/setup/setup-kba-questions.php:180
+msgid "Configure Second Factor - KBA (Security Questions)"
+msgstr "Настройка второго фактора - секретные вопросы"
+
+#: controllers/twofa/mo2fa-inline-registration.php:617
+#: controllers/twofa/mo2fa-inline-registration.php:733
+#: views/twofa/setup/setup-duo-authenticator.php:317
+msgid "Configure your phone"
+msgstr "Настройте свой телефон"
+
+#: views/class-mo2f-setup-wizard.php:252
+msgid "Congratulations! You are all set."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:277
+msgid "Congratulations, you're almost there..."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:277
+msgid "Congratulations."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1385
+msgid "Connect with miniOrange"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:191
+#: handler/class-registrationhandler.php:78
+msgid "Contact Site Administrator"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:252
+msgid "Continue"
+msgstr "Продолжать"
+
+#: views/class-mo2f-setup-wizard.php:328 views/class-mo2f-setup-wizard.php:334
+#: views/class-mo2f-setup-wizard.php:334
+msgid "Continue Setup"
+msgstr ""
+
+#: views/twofa/setup-twofa.php:196
+#, fuzzy
+#| msgid "( Current Plan )"
+msgid "CURRENT PLAN"
+msgstr "(Текущий тариф)"
+
+#: views/twofa/two-fa-login-option.php:429
+#: views/twofa/two-fa-login-option.php:505
+#, fuzzy
+#| msgid "Custom name in  Google authenticator App:"
+msgid "Custom account name in Google Authenticator App"
+msgstr "Пользовательское имя в приложении Google authenticator:"
+
+#: handler/twofa/setup-twofa.php:996 views/twofa/two-fa-custom-login.php:70
+msgid "Custom Email and SMS Templates"
+msgstr "Пользовательские шаблоны электронной почты и SMS"
+
+#: views/twofa/two-fa-login-option.php:409
+#: views/twofa/two-fa-login-option.php:485
+#, fuzzy
+#| msgid "Custom Redirection"
+msgid "Custom Redirect URLs"
+msgstr "Пользовательское перенаправление"
+
+#: views/twofa/two-fa-login-option.php:418
+#: views/twofa/two-fa-login-option.php:494
+#, fuzzy
+#| msgid "Customize Security Questions (KBA)"
+msgid "Custom Security Questions (KBA)"
+msgstr "Настроить секретные вопросы"
+
+#: handler/twofa/class-mo2fconstants.php:159
+msgid "Customer already exists."
+msgstr "Клиент уже существует."
+
+#: handler/twofa/class-mo2fconstants.php:165
+msgid "Customer check request failed."
+msgstr "Не удалось проверить запрос клиента."
+
+#: handler/twofa/class-mo2fconstants.php:162
+msgid "Customer Name is null"
+msgstr "Имя клиента равно null"
+
+#: handler/twofa/class-mo2fconstants.php:150
+msgid "Customer not found."
+msgstr "Клиент не найден."
+
+#: handler/twofa/class-mo2fconstants.php:228
+msgid "Customer registration failed."
+msgstr "Не удалось зарегистрировать клиента."
+
+#: handler/twofa/class-mo2fconstants.php:222
+msgid "Customer successfully registered."
+msgstr "Клиент успешно зарегистрирован."
+
+#: handler/twofa/class-mo2fconstants.php:189
+msgid "CustomerId is null."
+msgstr "Идентификатор клиента равен NULL."
+
+#: views/twofa/two-fa-login-option.php:370
+#: views/twofa/two-fa-login-option.php:445
+msgid "Customizations"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:79
+#: views/twofa/two-fa-custom-login.php:85
+msgid "Customize Email Template"
+msgstr "Настройка шаблона электронной почты"
+
+#: handler/twofa/setup-twofa.php:972 views/twofa/two-fa-custom-login.php:32
+msgid "Customize Plugin Icon"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:978 views/twofa/two-fa-custom-login.php:54
+msgid "Customize Plugin Name"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:80
+#: views/twofa/two-fa-custom-login.php:87
+msgid "Customize SMS Template"
+msgstr "Настройка шаблона SMS"
+
+#: views/twofa/two-fa-login-option.php:432
+#: views/twofa/two-fa-login-option.php:508
+msgid "Customize the Account name in the Google Authenticator App"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:987
+msgid "Customize UI of Login Pop up's"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:545 views/twofa/two-fa-rba.php:54
+msgid "days"
+msgstr ""
+
+#. %s: bold tags
+#: views/upgrade.php:1289
+#, php-format
+msgid ""
+"Deactivate and delete the free plugin from %1$1sWordPress dashboard%2$2s and "
+"install the paid plugin downloaded."
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:64
+msgid "devices for users to remember"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1291
+#: controllers/twofa/mo2fa-inline-registration.php:1766
+#: controllers/twofa/mo2fa-inline-registration.php:1771
+msgid "Didn't get code?"
+msgstr "Не получили код?"
+
+#: controllers/twofa/mo2fa-common-login.php:846
+msgid "Didn't receive mail?"
+msgstr "Не получили письмо?"
+
+#: controllers/twofa/mo2fa-common-login.php:640
+msgid "Didn't receive push nitification?"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:381
+msgid "Do you want to enable 2FA for some, or all the user roles? "
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:306
+#: views/twofa/setup/setup-duo-authenticator.php:380
+#: views/twofa/setup/setup-miniorange-authenticator.php:152
+msgid "Download and install"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:287
+#: views/twofa/setup/setup-duo-authenticator.php:361
+#: views/twofa/setup/setup-miniorange-authenticator.php:133
+msgid "Download and install "
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1617
+msgid "Download Codes"
+msgstr ""
+
+#. %s: bold tags
+#: views/upgrade.php:1279
+#, php-format
+msgid ""
+"Download the paid plugin from the %1$1sReleases and Downloads%2$2s tab "
+"through miniOrange Console ."
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:287
+#: views/twofa/setup/setup-duo-authenticator.php:361
+msgid "Duo"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:284
+#: views/twofa/setup/setup-duo-authenticator.php:358
+#, fuzzy
+#| msgid "GOOGLE AUTHENTICATOR"
+msgid "Duo Authenticator"
+msgstr "GOOGLE AUTHENTICATOR"
+
+#: views/twofa/setup/setup-duo-authenticator.php:303
+#: views/twofa/setup/setup-duo-authenticator.php:377
+#, fuzzy
+#| msgid "Google Authenticator."
+msgid "Duo Authenticator."
+msgstr "Google Authenticator."
+
+#: controllers/twofa/mo2fa-inline-registration.php:334
+#, fuzzy
+#| msgid "PUSH NOTIFICATIONS"
+msgid "Duo Push Notification"
+msgstr "PUSH УВЕДОМЛЕНИЯ"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1187
+#: views/twofa/setup/setup-duo-authenticator.php:49
+#: views/twofa/test/test-twofa-duo-authenticator.php:25
+msgid "Duo push notification is sent to your mobile phone."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:288
+msgid "Duo push notification validate successfully."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:494
+#, fuzzy
+#| msgid "Email already registered"
+msgid "Email already registered."
+msgstr "Электронная почта уже зарегистрирована"
+
+#: controllers/twofa/class-mo-2f-ajax.php:721
+msgid ""
+"Email is already registered in miniOrange. Please try to login to your "
+"account."
+msgstr ""
+
+#: handler/twofa/class-twofacustomregformapi.php:61
+msgid "Email Transaction Limit Exceeded"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:166
+#: handler/twofa/class-mo2fconstants.php:51
+#: views/twofa/two-fa-premium-feature.php:140
+msgid "Email Verification"
+msgstr "Проверка через Email"
+
+#: handler/twofa/class-miniorange-authentication.php:478
+msgid "Email verification"
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:38
+msgid "Enable"
+msgstr "Включить"
+
+#: views/twofa/two-fa-login-option.php:596
+msgid "Enable 2FA during login for specific users on your site"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:568
+msgid "Enable 2FA for specific Roles"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:412
+#: views/twofa/two-fa-login-option.php:488
+msgid ""
+"Enable Custom Relay state URL's (based on user roles in WordPress) to which "
+"the users will get redirected to, after the 2-factor authentication"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:152
+msgid "Enable Forgot Phone."
+msgstr "Включить забытый телефон."
+
+#: views/twofa/two-fa-login-option.php:612
+msgid ""
+"Enable KBA (Security Questions) as 2FA for Users logging in to the site from "
+"mobile phones."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:598
+msgid ""
+"Enable login from external apps that support XML-RPC. (eg. WordPress App)"
+msgstr ""
+
+#: views/twofa/two-fa-unlimitted-user.php:102
+msgid "Enable plugin log "
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1043 views/twofa/two-fa-shortcode.php:26
+msgid "Enable Reconfiguration: "
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1046 views/twofa/two-fa-shortcode.php:29
+msgid "Enable Remember Device: "
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:569
+msgid "Enable specific 2FA methods to Users during Inline Registration"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1040 views/twofa/two-fa-shortcode.php:23
+msgid "Enable Two Factor: "
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:176
+msgid "Enable XML-RPC Login."
+msgstr "Включить вход в XML-RPC."
+
+#: views/twofa/two-fa-login-option.php:178
+msgid ""
+"Enabling this option will decrease your overall login security. Users will "
+"be able to login through external applications which support XML-RPC without "
+"authenticating from miniOrange. "
+msgstr ""
+"Включение этого параметра уменьшит общую безопасность входа в систему. "
+"Пользователи смогут подключаться к внешним приложениям, поддерживающим XML-"
+"RPC, без аутентификации с помощью miniOrange. "
+
+#: handler/twofa/class-mo2fconstants.php:201
+msgid "End user created successfully."
+msgstr "Конечный пользователь создан успешно."
+
+#: handler/twofa/class-mo2fconstants.php:210
+msgid "End user found under different customer. "
+msgstr "Конечный пользователь найден под другим клиентом. "
+
+#: handler/twofa/class-mo2fconstants.php:207
+msgid "End user found."
+msgstr "Конечный пользователь найден."
+
+#: handler/twofa/class-mo2fconstants.php:213
+msgid "End user not found."
+msgstr "Конечный пользователь не найден."
+
+#: handler/twofa/class-mo2fconstants.php:237
+msgid "End User retrieved successfully."
+msgstr "Конечный пользователь успешно восстановлен."
+
+#: views/twofa/setup/setup-otp-over-telegram.php:44
+msgid "Enter Chat ID recieved on your Telegram without any space or dashes"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1720
+msgid "Enter chat ID without any space or dashes"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1283
+msgid "Enter code"
+msgstr ""
+
+#: handler/user-profile-2fa.php:204 handler/user-profile-2fa.php:255
+msgid "Enter Code:"
+msgstr ""
+
+#: controllers/twofa/class-mo-2f-ajax.php:446
+#: controllers/twofa/mo2fa-inline-registration.php:1758
+#: views/twofa/setup/setup-otp-over-sms.php:58
+#: views/twofa/setup/setup-otp-over-telegram.php:53
+msgid "Enter One Time Passcode"
+msgstr "Введите одноразовый код"
+
+#: controllers/twofa/class-mo-2f-ajax.php:489
+#, fuzzy
+#| msgid "Enter one time passcode"
+msgid "Enter One Time Passcode:"
+msgstr "Введите одноразовый код"
+
+#: controllers/twofa/class-mo-2f-ajax.php:448
+#: controllers/twofa/class-mo-2f-ajax.php:491
+#: controllers/twofa/mo2fa-inline-registration.php:963
+#: views/twofa/setup/setup-authy-authenticator.php:92
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:241
+#: views/twofa/setup/setup-google-authenticator.php:132
+#: views/twofa/setup/setup-otp-over-sms.php:60
+#: views/twofa/setup/setup-otp-over-telegram.php:55
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:48
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:98
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:31
+#: views/twofa/test/test-twofa-otp-over-sms.php:33
+#: views/twofa/test/test-twofa-otp-over-telegram.php:31
+msgid "Enter OTP"
+msgstr "Введите одноразовый код"
+
+#: miniorange_2_factor_settings.php:197
+#: handler/class-registrationhandler.php:84
+msgid "Enter OTP "
+msgstr ""
+
+#: handler/user-profile-2fa.php:205 handler/user-profile-2fa.php:256
+msgid "Enter OTP:"
+msgstr "Введите одноразовый код:"
+
+#: handler/user-profile-2fa.php:279 controllers/twofa/class-mo-2f-ajax.php:435
+#: controllers/twofa/mo2fa-inline-registration.php:1737
+#: views/twofa/setup/setup-otp-over-sms.php:48
+msgid "Enter phone number without any space or dashes"
+msgstr "Введите номер телефона без пробелов или тире"
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:23
+#, fuzzy
+#| msgid "Enter the"
+msgid "enter the"
+msgstr "Введите"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1764
+msgid "Enter the code"
+msgstr "Введите код"
+
+#: views/twofa/two-fa-shortcode.php:62
+msgid ""
+"Enter the id of your custom login form to use 'Enable Remember Device' on "
+"the login page:"
+msgstr ""
+
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:91
+msgid "Enter the one time passcode sent to your registered email id."
+msgstr "Введите одноразовый код, отправленный на ваш адрес электронной почты."
+
+#: views/twofa/test/test-twofa-otp-over-telegram.php:22
+#, fuzzy
+#| msgid ""
+#| "Enter the one time passcode sent to your registered mobile number and "
+#| "email id."
+msgid ""
+"Enter the one time passcode sent to your registered mobile number of "
+"Telegram."
+msgstr ""
+"Введите одноразовый код, отправленный на номер вашего мобильного телефона и "
+"адрес электронной почты."
+
+#: views/twofa/test/test-twofa-otp-over-sms.php:24
+msgid "Enter the one time passcode sent to your registered mobile number."
+msgstr ""
+"Введите одноразовый код, отправленный на зарегистрированный номер мобильного "
+"телефона."
+
+#. %s: Name of the 2fa method
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:36
+#, php-format
+msgid "Enter the verification code from the configured account in your %s app."
+msgstr ""
+
+#: controllers/twofa/class-mo-2f-ajax.php:563
+#: controllers/twofa/class-mo-2f-ajax.php:603
+#: controllers/twofa/class-mo-2f-ajax.php:619
+#: views/twofa/setup/setup-kba-questions.php:112
+#: views/twofa/setup/setup-kba-questions.php:128
+msgid "Enter your answer"
+msgstr "Введите свой ответ"
+
+#: controllers/twofa/class-mo-2f-ajax.php:613
+#: views/twofa/setup/setup-kba-questions.php:122
+msgid "Enter your custom question here"
+msgstr "Введите свой собственный вопрос здесь"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1744
+msgid "Enter your email"
+msgstr "Введите email"
+
+#: controllers/twofa/class-mo-2f-ajax.php:478
+msgid "Enter your email address without any space or dashes"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1727
+msgid "Enter your phone number"
+msgstr "Введите номер вашего телефона"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1701
+msgid ""
+"Enter your phone number. An One Time Passcode(OTP) wll be sent to this "
+"number and your email address."
+msgstr ""
+"Введите свой номер телефона. Однократный код будет отправлен на этот номер и "
+"ваш адрес электронной почты."
+
+#: controllers/class-mo2f-ajax-dashboard.php:86
+#: controllers/class-mo2f-ajax-dashboard.php:113
+#: controllers/feedback-footer.php:20 controllers/ip-blocking.php:16
+#: controllers/navbar.php:14 handler/class-ajaxhandler.php:34
+#: handler/class-feedbackhandler.php:34 handler/class-feedbackhandler.php:157
+#: handler/user-profile-2fa-update.php:16
+#: controllers/duo_authenticator/class-mo-2f-duo-authenticator.php:46
+#: controllers/duo_authenticator/class-mo-2f-duo-authenticator.php:68
+#: controllers/twofa/class-mo-2f-ajax.php:146
+#: controllers/twofa/class-mo-2f-ajax.php:231
+#: controllers/twofa/class-mo-2f-ajax.php:891
+#: controllers/twofa/class-mo-2f-ajax.php:908
+#: controllers/twofa/class-mo-2f-ajax.php:932
+#: controllers/twofa/class-mo-2f-ajax.php:956
+#: controllers/twofa/class-mo-2f-ajax.php:1004
+#: controllers/twofa/class-mo-2f-ajax.php:1094
+#: controllers/twofa/class-mo-2f-ajax.php:1161
+#: controllers/twofa/class-mo-2f-ajax.php:1184
+#: controllers/twofa/class-mo-2f-ajax.php:1203
+#: controllers/twofa/class-mo-2f-ajax.php:1231
+#: handler/twofa/class-miniorange-authentication.php:1249
+#: handler/twofa/class-miniorange-authentication.php:1261
+#: handler/twofa/class-miniorange-authentication.php:1271
+#: handler/twofa/class-miniorange-authentication.php:1280
+#: handler/twofa/class-miniorange-authentication.php:1292
+#: handler/twofa/class-miniorange-authentication.php:1311
+#: handler/twofa/class-miniorange-authentication.php:1376
+#: handler/twofa/class-miniorange-authentication.php:1540
+#: handler/twofa/class-miniorange-authentication.php:1571
+#: handler/twofa/class-miniorange-authentication.php:1612
+#: handler/twofa/class-miniorange-authentication.php:1651
+#: handler/twofa/class-miniorange-authentication.php:1697
+#: handler/twofa/class-miniorange-authentication.php:1751
+#: handler/twofa/class-miniorange-authentication.php:1765
+#: handler/twofa/class-miniorange-authentication.php:1776
+#: handler/twofa/class-miniorange-authentication.php:2306
+#: handler/twofa/class-miniorange-authentication.php:3016
+#: handler/twofa/class-miniorange-authentication.php:3427
+#: handler/twofa/class-miniorange-authentication.php:3442
+#: handler/twofa/class-miniorange-authentication.php:3483
+#: handler/twofa/class-miniorange-password-2factor-login.php:181
+#: handler/twofa/class-miniorange-password-2factor-login.php:201
+#: handler/twofa/class-miniorange-password-2factor-login.php:219
+#: handler/twofa/class-miniorange-password-2factor-login.php:242
+#: handler/twofa/class-miniorange-password-2factor-login.php:335
+#: handler/twofa/class-miniorange-password-2factor-login.php:348
+#: handler/twofa/class-miniorange-password-2factor-login.php:416
+#: handler/twofa/class-miniorange-password-2factor-login.php:512
+#: handler/twofa/class-miniorange-password-2factor-login.php:623
+#: handler/twofa/class-miniorange-password-2factor-login.php:748
+#: handler/twofa/class-miniorange-password-2factor-login.php:868
+#: handler/twofa/class-miniorange-password-2factor-login.php:928
+#: handler/twofa/class-miniorange-password-2factor-login.php:962
+#: handler/twofa/class-miniorange-password-2factor-login.php:1084
+#: handler/twofa/class-miniorange-password-2factor-login.php:1121
+#: handler/twofa/class-miniorange-password-2factor-login.php:1207
+#: handler/twofa/class-miniorange-password-2factor-login.php:1320
+#: handler/twofa/class-miniorange-password-2factor-login.php:1346
+#: handler/twofa/class-miniorange-password-2factor-login.php:1811
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:322
+msgid ""
+"Error occured while connecting to server. Please contact your administrator."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:320
+msgid ""
+"Error occured while connecting to server. Please follow the <a href=\"https:"
+"//faq.miniorange.com/knowledgebase/i-am-locked-cant-access-my-account-what-"
+"do-i-do/\" target=\"_blank\">Locked out guide</a> to get immediate access to "
+"your account."
+msgstr ""
+
+#: controllers/account.php:109 controllers/twofa/class-mo-2f-ajax.php:691
+#: handler/twofa/class-miniorange-password-2factor-login.php:136
+msgid "Error occured while creating an account."
+msgstr ""
+
+#: controllers/account.php:140 controllers/twofa/class-mo-2f-ajax.php:725
+#: handler/twofa/class-miniorange-password-2factor-login.php:167
+msgid "Error Occured while registration"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:273
+msgid "Error occured while registration. Please try again."
+msgstr "Ошибка при регистрации. Пожалуйста, попробуйте еще раз."
+
+#: handler/twofa/class-mo2fconstants.php:294
+msgid "Error occured while saving your kba details. Please try again."
+msgstr ""
+"При сохранении данных ваших контрольных вопросов произошла ошибка. "
+"Пожалуйста, попробуйте еще раз."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:310
+msgid "Error occurred while establising connection."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:285
+msgid "Error occurred while registering the user. Please try again."
+msgstr "Ошибка при регистрации пользователя. Пожалуйста, попробуйте еще раз."
+
+#: handler/twofa/class-mo2fconstants.php:447
+msgid "Error occurred while saving the settings.Please try again."
+msgstr "Ошибка при сохранении настроек. Повторите попытку."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:290
+msgid "Error occurred while validating the backup codes."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:387
+msgid "Error occurred while validating the OTP. Please try again."
+msgstr "Ошибка при проверке одноразового код. Пожалуйста, попробуйте еще раз."
+
+#: handler/twofa/class-mo2fconstants.php:393
+msgid ""
+"Error occurred while validating the OTP. Please try again. Possible causes:"
+msgstr ""
+"Ошибка при проверке одноразового кода. Пожалуйста, попробуйте еще раз. "
+"Возможные причины:"
+
+#: handler/twofa/class-mo2fconstants.php:402
+msgid "Error occurred while validating the user. Please try again."
+msgstr ""
+"При проверке пользователя произошла ошибка. Пожалуйста, попробуйте еще раз."
+
+#: miniorange_2_factor_settings.php:212
+#: handler/class-registrationhandler.php:99
+msgid "Error Validating OTP"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:96
+msgid "Exception during logUserTransaction"
+msgstr "Исключение во время транзакции пользователя"
+
+#: handler/twofa/class-mo2fconstants.php:90
+msgid "Exception during SMS sending"
+msgstr "Исключение во время отправки SMS"
+
+#: views/twofa/two-fa-login-option.php:561
+msgid "Features"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:439
+msgid "Features in the Premium Plan"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:337
+msgid "Features in the Standard Plan"
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:70
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:204
+#: views/twofa/setup/setup-google-authenticator.php:95
+msgid "field, type the below secret key"
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:66
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:200
+#: views/twofa/setup/setup-google-authenticator.php:91
+msgid "field, type your preferred account name"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1626
+#: controllers/twofa/mo2fa-common-login.php:1642
+msgid "Finish"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1104
+#: views/twofa/setup/setup-miniorange-authenticator.php:195
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:33
+msgid "Follow these instructions below and try again."
+msgstr "Следуйте приведенным ниже инструкциям и повторите попытку."
+
+#: views/twofa/two-fa-premium-feature.php:48
+msgid "For all Users"
+msgstr "Для всех пользователей"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:64
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:68
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:198
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:202
+#: views/twofa/setup/setup-google-authenticator.php:89
+#: views/twofa/setup/setup-google-authenticator.php:93
+msgid "For the"
+msgstr ""
+
+#: handler/twofa/class-mo2f-cloud-onprem-interface.php:48 api/class-two-factor-setup.php:67
+msgid "for the steps to enable curl."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:339
+msgid "for verification to"
+msgstr "для проверки"
+
+#: controllers/twofa/mo2fa-common-login.php:1326
+msgid "Forgot Phone ?"
+msgstr "Забыли телефон?"
+
+#: controllers/twofa/mo2fa-common-login.php:633
+#: controllers/twofa/mo2fa-common-login.php:836
+#: controllers/twofa/mo2fa-common-login.php:1082
+msgid "Forgot Phone?"
+msgstr "Забыли телефон?"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1590
+msgid "From now, when you login, you will be prompted for"
+msgstr "Теперь, когда вы входите в систему, вам будет предложено ввести"
+
+#: handler/twofa/class-mo2fconstants.php:69
+msgid "GenerateOtpRequest is null"
+msgstr "Создать запрос одноразового кода - null"
+
+#: views/class-mo2f-setup-wizard.php:524
+msgid ""
+"Give users a grace period to configure 2FA (Users will be enforced to setup "
+"2FA after grace period expiry)."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1444
+msgid "Go Back to Registration"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:49
+msgid ""
+"Go to /wp-content/uploads/miniorange folder and upload a .png image with the "
+"name \"plugin_icon\" (Max Size: 20x34px)."
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:281
+#: views/twofa/setup/setup-duo-authenticator.php:355
+#: views/twofa/setup/setup-miniorange-authenticator.php:127
+msgid "Go to App Store"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:300
+#: views/twofa/setup/setup-duo-authenticator.php:374
+#: views/twofa/setup/setup-miniorange-authenticator.php:146
+msgid "Go to Google Play Store."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:141
+msgid "Google / Authy / Microsoft Authenticator"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:45
+#: handler/twofa/class-mo2fconstants.php:132
+#: views/twofa/two-fa-premium-feature.php:162
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+
+#: views/class-mo2f-setup-wizard.php:338
+msgid "Grace period"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:280
+msgid ""
+"Great job, the plugin and 2FA policies are now configured. You can always "
+"change the plugin settings and 2FA policies at a later stage from the "
+"miniOrange 2FA entry in the WordPress menu."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:333
+#, fuzzy
+#| msgid "has been set as your default 2nd factor method."
+msgid "has been set as your default 2nd factor method"
+msgstr "был установлен как ваш метод 2-го фактора по умолчанию."
+
+#: views/class-mo2f-setup-wizard.php:539
+msgid "hours"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:225
+msgid "How would you like to authenticate yourself?"
+msgstr "Как вы хотите аутентифицироваться?"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://miniorange.com"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1102
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:28
+msgid "I am not able to scan the QR code,"
+msgstr "Я не могу сканировать QR-код,"
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:190
+msgid "I am not able to scan the QR code, what should I do?"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1069
+msgid ""
+"Identify yourself by scanning the QR code with miniOrange Authenticator app."
+msgstr ""
+"Идентифицируйте себя, отсканировав QR-код с помощью приложения miniOrange "
+"Authenticator."
+
+#: views/twofa/two-fa-login-option.php:554
+msgid ""
+"If Inline Registration is enabled by the admin for the users, the next time "
+"the users login to the website, they will be prompted to set up the 2FA of "
+"their choice by creating an account with miniOrange."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2927
+msgid ""
+"If you don't have 2-factor authentication enabled for your WordPress account,"
+" leave this field empty."
+msgstr ""
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:204
+msgid ""
+"If you get a cross mark on QR Code then click on 'Refresh QR Code' link."
+msgstr ""
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:37
+msgid ""
+"If you get cross mark on QR Code then click on 'Back' button and again click "
+"on 'Test' link."
+msgstr ""
+"Если вы получаете кросс-метку в QR-коде, нажмите кнопку «Назад» и снова "
+"нажмите ссылку «Проверить»."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1108
+msgid "If you get cross mark on QR Code then click on 'Refresh QR Code' link."
+msgstr ""
+"Если вы получаете кросс-метку в QR-коде, нажмите кнопку «Перезагрузить QR "
+"Код»"
+
+#: controllers/twofa/mo2fa-common-login.php:1569
+msgid ""
+"If you have received the codes on your email and do not wish to download the "
+"codes, click on Finish."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:941
+msgid "In \"Enter account name\" type your full email address."
+msgstr ""
+"В поле \"Введите имя учетной записи\" введите полный адрес электронной почты."
+
+#: controllers/twofa/mo2fa-inline-registration.php:942
+msgid "In \"Enter your key\" type your secret key:"
+msgstr "В \"Введите свой ключ\" введите секретный ключ:"
+
+#: views/twofa/setup/setup-authy-authenticator.php:65
+msgid "In Authy 2-Factor Authentication App, tap on ENTER KEY MANUALLY."
+msgstr ""
+"В приложении Authy 2-Factor Authentication нажмите на ВВЕСТИ КЛЮЧ ВРУЧНУЮ."
+
+#: controllers/twofa/mo2fa-inline-registration.php:917
+msgid "In the app, tap on Menu and select \"Set up account\""
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:36
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:162
+#: views/twofa/setup/setup-google-authenticator.php:58
+msgid "In the app, tap on Menu and select \"Set up account\"."
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:66
+#, fuzzy
+#| msgid "In \"Adding New Account\" type your secret key:"
+msgid "In the pop up \"Adding New Account\", type your secret key:"
+msgstr "В «Добавление новой учетной записи» введите секретный ключ:"
+
+#: controllers/twofa/class-mo-2f-ajax.php:542
+#: controllers/twofa/class-mo-2f-ajax.php:582
+#: handler/twofa/class-mo2fconstants.php:108
+#: views/twofa/setup/setup-kba-questions.php:51
+#: views/twofa/setup/setup-kba-questions.php:91
+msgid "In what city did you meet your spouse/significant other?"
+msgstr "В каком городе вы встретили своего супруга / возлюбленного(ю) другого?"
+
+#: handler/twofa/class-mo2fconstants.php:126
+msgid "In what city or town was your first job"
+msgstr "В каком городе была ваша первая работа"
+
+#: controllers/twofa/class-mo-2f-ajax.php:548
+#: controllers/twofa/class-mo-2f-ajax.php:588
+#: views/twofa/setup/setup-kba-questions.php:57
+#: views/twofa/setup/setup-kba-questions.php:97
+msgid "In what city or town was your first job?"
+msgstr "В каком городе была ваша первая работа?"
+
+#: views/class-mo2f-setup-wizard.php:325
+msgid "Inline Registration"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:550
+msgid ""
+"Inline Registration is the registration process the users go through the "
+"first time they setup 2FA."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:540
+msgid "Inline Registration Options"
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:52
+msgid "Install the Authy 2-Factor Authentication App."
+msgstr "Настроить двухфакторную аутентификацию через приложение Authy."
+
+#: views/twofa/setup/setup-duo-authenticator.php:429
+#: views/twofa/setup/setup-duo-authenticator.php:431
+msgid "Integration key"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:324
+msgid "Invalid Answers. Please try again."
+msgstr "Недействительные ответы. Пожалуйста, попробуйте еще раз."
+
+#: miniorange_2_factor_settings.php:195
+#: handler/class-registrationhandler.php:82
+msgid "Invalid Email Address"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:258
+msgid "Invalid email or password. Please try again."
+msgstr ""
+"Неправильный адрес электронной почты или пароль. Пожалуйста, попробуйте еще "
+"раз."
+
+#: handler/twofa/class-mo2fconstants.php:81
+msgid "Invalid format."
+msgstr "Неверный формат."
+
+#: handler/twofa/class-mo2fconstants.php:87
+msgid "Invalid mobile authentication request."
+msgstr "Недействительный запрос на мобильную проверку подлинности."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:1185
+msgid "Invalid OTP provided. Please Try again."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:216
+msgid "Invalid OTP provided. Please try again."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:561
+#: handler/twofa/class-miniorange-password-2factor-login.php:607
+#: handler/twofa/class-mo2fconstants.php:255
+msgid "Invalid OTP. Please try again."
+msgstr "Неверный одноразовый код. Пожалуйста попробуйте снова."
+
+#: handler/twofa/class-mo2fconstants.php:183
+msgid "Invalid parameters."
+msgstr "Недопустимые параметры."
+
+#: miniorange_2_factor_settings.php:193
+#: handler/class-registrationhandler.php:80
+msgid "Invalid Phone Number"
+msgstr ""
+
+#: controllers/class-mo2f-ajax-dashboard.php:86
+#: controllers/class-mo2f-ajax-dashboard.php:113
+#: controllers/feedback-footer.php:20 controllers/ip-blocking.php:16
+#: controllers/navbar.php:14 handler/class-ajaxhandler.php:34
+#: handler/class-feedbackhandler.php:34 handler/class-feedbackhandler.php:157
+#: handler/user-profile-2fa-update.php:16
+#: controllers/duo_authenticator/class-mo-2f-duo-authenticator.php:46
+#: controllers/duo_authenticator/class-mo-2f-duo-authenticator.php:68
+#: controllers/twofa/class-mo-2f-ajax.php:146
+#: controllers/twofa/class-mo-2f-ajax.php:231
+#: controllers/twofa/class-mo-2f-ajax.php:891
+#: controllers/twofa/class-mo-2f-ajax.php:908
+#: controllers/twofa/class-mo-2f-ajax.php:932
+#: controllers/twofa/class-mo-2f-ajax.php:956
+#: controllers/twofa/class-mo-2f-ajax.php:1004
+#: controllers/twofa/class-mo-2f-ajax.php:1094
+#: controllers/twofa/class-mo-2f-ajax.php:1161
+#: controllers/twofa/class-mo-2f-ajax.php:1184
+#: controllers/twofa/class-mo-2f-ajax.php:1203
+#: controllers/twofa/class-mo-2f-ajax.php:1231
+#: handler/twofa/class-miniorange-authentication.php:1249
+#: handler/twofa/class-miniorange-authentication.php:1261
+#: handler/twofa/class-miniorange-authentication.php:1271
+#: handler/twofa/class-miniorange-authentication.php:1280
+#: handler/twofa/class-miniorange-authentication.php:1292
+#: handler/twofa/class-miniorange-authentication.php:1311
+#: handler/twofa/class-miniorange-authentication.php:1376
+#: handler/twofa/class-miniorange-authentication.php:1540
+#: handler/twofa/class-miniorange-authentication.php:1571
+#: handler/twofa/class-miniorange-authentication.php:1612
+#: handler/twofa/class-miniorange-authentication.php:1651
+#: handler/twofa/class-miniorange-authentication.php:1697
+#: handler/twofa/class-miniorange-authentication.php:1751
+#: handler/twofa/class-miniorange-authentication.php:1765
+#: handler/twofa/class-miniorange-authentication.php:1776
+#: handler/twofa/class-miniorange-authentication.php:2306
+#: handler/twofa/class-miniorange-authentication.php:3016
+#: handler/twofa/class-miniorange-authentication.php:3427
+#: handler/twofa/class-miniorange-authentication.php:3442
+#: handler/twofa/class-miniorange-authentication.php:3483
+#: handler/twofa/class-miniorange-password-2factor-login.php:181
+#: handler/twofa/class-miniorange-password-2factor-login.php:201
+#: handler/twofa/class-miniorange-password-2factor-login.php:219
+#: handler/twofa/class-miniorange-password-2factor-login.php:242
+#: handler/twofa/class-miniorange-password-2factor-login.php:348
+#: handler/twofa/class-miniorange-password-2factor-login.php:416
+#: handler/twofa/class-miniorange-password-2factor-login.php:512
+#: handler/twofa/class-miniorange-password-2factor-login.php:623
+#: handler/twofa/class-miniorange-password-2factor-login.php:748
+#: handler/twofa/class-miniorange-password-2factor-login.php:868
+#: handler/twofa/class-miniorange-password-2factor-login.php:928
+#: handler/twofa/class-miniorange-password-2factor-login.php:962
+#: handler/twofa/class-miniorange-password-2factor-login.php:1084
+#: handler/twofa/class-miniorange-password-2factor-login.php:1121
+#: handler/twofa/class-miniorange-password-2factor-login.php:1207
+#: handler/twofa/class-miniorange-password-2factor-login.php:1320
+#: handler/twofa/class-miniorange-password-2factor-login.php:1346
+#: handler/twofa/class-miniorange-password-2factor-login.php:1718
+#: handler/twofa/class-miniorange-password-2factor-login.php:1811
+msgid "Invalid Request."
+msgstr "Неверный запрос."
+
+#: handler/twofa/class-mo2fconstants.php:306
+msgid "Invalid request."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:174
+msgid "Invalid request. No such challenge request was initiated."
+msgstr "Неверный запрос. Такой запрос не был инициирован."
+
+#: handler/twofa/class-mo2fconstants.php:450
+msgid ""
+"Invalid request. Please register with miniOrange and configure 2-Factor to "
+"save your login settings."
+msgstr ""
+"Неверный запрос. Пожалуйста, зарегистрируйтесь в miniOrange и настройте 2-"
+"фактор, чтобы сохранить свои настройки входа."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:1105
+#: handler/twofa/class-mo2fconstants.php:363
+msgid ""
+"Invalid request. Please register with miniOrange before configuring your "
+"mobile."
+msgstr ""
+"Неверный запрос. Прежде чем настраивать свой мобильный телефон, "
+"зарегистрируйтесь в miniOrange."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:1478
+#: handler/twofa/class-miniorange-password-2factor-login.php:1523
+msgid ""
+"Invalid request. Please register with miniOrange to configure 2 Factor "
+"plugin."
+msgstr ""
+"Неверный запрос. Пожалуйста, зарегистрируйтесь в \"miniOrange\", чтобы "
+"настроить плагин 2 Factor."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:732
+#: handler/twofa/class-miniorange-password-2factor-login.php:912
+#: handler/twofa/class-mo2fconstants.php:252
+msgid "Invalid request. Please try again"
+msgstr "Неверный запрос. Пожалуйста, попробуйте еще раз"
+
+#: handler/twofa/class-mo2fconstants.php:243
+msgid "Invalid request. Test case failed."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:168
+msgid "Invalid username or password. Please try again."
+msgstr ""
+"Неправильное имя пользователя или пароль. Пожалуйста, попробуйте еще раз."
+
+#: views/twofa/two-fa-login-option.php:563
+msgid ""
+"Invoke 2FA Registration & Setup for Users during first-time login (Inline "
+"Registration)"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:910
+#: controllers/twofa/mo2fa-inline-registration.php:1003
+#: controllers/twofa/mo2fa-inline-registration.php:1009
+#: controllers/twofa/mo2fa-inline-registration.php:1014
+#: controllers/twofa/mo2fa-inline-registration.php:1019
+#: controllers/twofa/mo2fa-inline-registration.php:1024
+#: controllers/twofa/mo2fa-inline-registration.php:1029
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:293
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:307
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:313
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:318
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:323
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:328
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:333
+#: views/twofa/setup/setup-google-authenticator.php:157
+#: views/twofa/setup/setup-google-authenticator.php:174
+#: views/twofa/setup/setup-google-authenticator.php:180
+#: views/twofa/setup/setup-google-authenticator.php:185
+#: views/twofa/setup/setup-google-authenticator.php:190
+#: views/twofa/setup/setup-google-authenticator.php:195
+#: views/twofa/setup/setup-google-authenticator.php:200
+msgid "iOS App Store"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:277
+#: views/twofa/setup/setup-duo-authenticator.php:351
+#: views/twofa/setup/setup-miniorange-authenticator.php:123
+msgid "iPhone Users"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:291
+msgid "is set as your 2 factor authentication method."
+msgstr "устанавливается как ваш 2-факторный метод проверки подлинности."
+
+#: handler/twofa/class-mo2fconstants.php:417
+#: handler/twofa/class-mo2fconstants.php:420
+msgid "is set as your Two-Factor method."
+msgstr "устанавливается как ваш двухфакторный метод."
+
+#: views/twofa/two-fa-login-option.php:362
+#: views/twofa/two-fa-login-option.php:530
+msgid "KBA (Security Questions)"
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:81
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:215
+#: views/twofa/setup/setup-google-authenticator.php:106
+msgid "Key type: make sure"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:951
+msgid "Key type: make sure \"Time-based\" is selected."
+msgstr "Тип ключа: убедитесь, что выбрано \"Время.\""
+
+#: views/class-mo2f-setup-wizard.php:356
+msgid "Learn more."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:192
+msgid "Let us help you get started"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:198
+msgid "Let’s get started!"
+msgstr ""
+
+#: handler/user-profile-2fa.php:214 handler/user-profile-2fa.php:265
+msgid "Link to reconfigure 2nd factor will be sent to "
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:143
+msgid "Links Text Color:"
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1036 views/twofa/two-fa-shortcode.php:20
+msgid "List of Shortcodes"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:377
+#: views/twofa/two-fa-login-option.php:452
+msgid "Login Screen Options"
+msgstr ""
+
+#: views/upgrade.php:1295
+#, fuzzy
+#| msgid ""
+#| "Login to the premium plugin with the miniOrange account you used to make "
+#| "the payment, after this your users will be able to set up 2FA."
+msgid ""
+"Login to the paid plugin with the miniOrange account you used to make the "
+"payment, after this your users will be able to set up 2FA."
+msgstr ""
+"Войдите в премиальный плагин с учетной записью miniOrange, которую вы "
+"использовали для оплаты, после чего ваши пользователи смогут настроить 2FA."
+
+#: views/twofa/two-fa-login-option.php:84
+msgid "Login with 2nd Factor only "
+msgstr "Вход только со вторым фактором "
+
+#: views/twofa/two-fa-login-option.php:56
+msgid "Login with password + 2nd Factor "
+msgstr "Вход с паролем + 2-й фактор "
+
+#: views/twofa/two-fa-rba.php:38
+msgid ""
+"Login with password + 2nd Factor. The option is available in Login Settings "
+"tab."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:391
+#: views/twofa/two-fa-login-option.php:467
+msgid "Login with WordPress username and 2nd Factor only"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:380
+#: views/twofa/two-fa-login-option.php:455
+msgid "Login with WordPress username/password and 2nd Factor"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1106
+#: views/twofa/setup/setup-miniorange-authenticator.php:198
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:35
+msgid "Make sure your desktop screen has enough brightness."
+msgstr "Убедитесь, что на вашем рабочем столе достаточно яркости."
+
+#: handler/twofa/class-mo2fconstants.php:411
+msgid "method."
+msgstr "метод."
+
+#. Author of the plugin
+#: views/twofa/setup/setup-miniorange-authenticator.php:130
+msgid "miniOrange"
+msgstr ""
+
+#. Name of the plugin
+msgid "miniOrange 2 Factor Authentication"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:115
+msgid "miniOrange 2-factor authentication Setup"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:114
+#: handler/twofa/class-miniorange-authentication.php:428
+msgid "miniOrange 2-factor Logo"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:104
+msgid "miniOrange 2FA &rsaquo; Setup Wizard"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:207
+#: handler/class-registrationhandler.php:94
+msgid "miniOrange : Email Field"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:206
+#: handler/class-registrationhandler.php:93
+msgid "miniOrange : Phone Field not Found."
+msgstr ""
+
+#: miniorange_2_factor_settings.php:210
+#: handler/class-registrationhandler.php:97
+msgid "miniOrange : Register/Login with miniOrange to Enable 2FA for this Form"
+msgstr ""
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:133
+#: views/twofa/setup/setup-miniorange-authenticator.php:182
+msgid "miniOrange Authenticator"
+msgstr ""
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:22
+#, fuzzy
+#| msgid "miniOrange Authenticator App"
+msgid "miniOrange Authenticator App "
+msgstr "приложение miniOrange Authenticator"
+
+#: handler/twofa/class-mo2fconstants.php:36
+msgid "miniOrange Push Notification"
+msgstr "miniOrange Push-уведомление"
+
+#: handler/twofa/class-mo2fconstants.php:33
+msgid "miniOrange QR Code Authentication"
+msgstr "аутентификация по QR-коду miniOrange"
+
+#: handler/twofa/class-mo2fconstants.php:39
+msgid "miniOrange Soft Token"
+msgstr "miniOrange токен"
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:149
+msgid "miniOrange."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:84
+msgid "Mobile registration failed."
+msgstr "Ошибка в мобильной регистрации."
+
+#: controllers/twofa/mo2fa-inline-registration.php:107
+msgid "New security system has been enabled"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:177
+msgid "No OTP Token for the given request was found."
+msgstr "Не обнаружен токен OTP для данного запроса."
+
+#: views/twofa/two-fa-login-option.php:85
+msgid "No password required."
+msgstr "Пароль не требуется."
+
+#: views/twofa/setup/setup-duo-authenticator.php:288
+#: views/twofa/setup/setup-duo-authenticator.php:307
+#: views/twofa/setup/setup-duo-authenticator.php:362
+#: views/twofa/setup/setup-duo-authenticator.php:381
+msgid "NOT Duo"
+msgstr ""
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:134
+#: views/twofa/setup/setup-miniorange-authenticator.php:153
+msgid "NOT MOAuth"
+msgstr ""
+
+#: views/upgrade.php:1300
+#, fuzzy
+#| msgid "Note:"
+msgid "Note :"
+msgstr "Заметка:"
+
+#: views/twofa/setup/setup-authy-authenticator.php:53
+msgid "Now open and configure Authy 2-Factor Authentication App."
+msgstr "Теперь откройте и настройте приложение Authy 2-Factor Authentication."
+
+#: views/class-mo2f-setup-wizard.php:293
+msgid ""
+"Now you need to configure 2FA for your own user account. You can do this now "
+"(recommended) or later."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:68
+#, fuzzy
+#| msgid ""
+#| "In the login from the same device, user will bypass 2nd factor i.e user "
+#| "will be logged in through username + password only."
+msgid ""
+"on 2nd factor screen. In the next login from the same device, user will "
+"bypass 2nd factor, i.e. user will be logged in through username + password "
+"only."
+msgstr ""
+"При входе с одного и того же устройства пользователь будет обходить второй "
+"фактор. Пользователь будет регистрироваться только через имя пользователя и "
+"пароль."
+
+#: controllers/twofa/mo2fa-inline-registration.php:958
+msgid ""
+"Once you have scanned the barcode, enter the 6-digit verification code "
+"generated by the Authenticator app"
+msgstr ""
+"После сканирования штрих-кода введите 6-значный код подтверждения, созданный "
+"приложением Authenticator"
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:24
+msgid "one time passcode"
+msgstr "одноразовый код"
+
+#: handler/twofa/class-mo2fconstants.php:267
+msgid "One Time Passcode has been sent for verification to "
+msgstr "Одноразовый код был отправлен для проверки на "
+
+#: controllers/twofa/class-mo-2f-ajax.php:561
+#: controllers/twofa/class-mo-2f-ajax.php:601
+#: controllers/twofa/class-mo-2f-ajax.php:617
+#: controllers/twofa/mo2fa-common-login.php:529
+#: views/twofa/setup/setup-kba-questions.php:70
+#: views/twofa/setup/setup-kba-questions.php:110
+#: views/twofa/setup/setup-kba-questions.php:126
+msgid ""
+"Only alphanumeric letters with special characters(_@.$#&amp;+-) are allowed."
+msgstr ""
+"Разрешены только буквенно-цифровые буквы со специальными символами (_ @. $ # "
+"& Amp; + -)."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:1191
+#: handler/twofa/class-mo2fconstants.php:405
+msgid "Only digits are allowed. Please enter again."
+msgstr "Разрешены только цифры. Введите еще раз."
+
+#: controllers/twofa/mo2fa-common-login.php:1286
+msgid "Only digits within range 4-8 are allowed."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:401
+msgid "Only for specific roles"
+msgstr ""
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:21
+msgid "Open your"
+msgstr "Открыть ваш"
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:182
+msgid "Open your "
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1107
+#: views/twofa/setup/setup-miniorange-authenticator.php:201
+msgid "Open your app and click on Configure button to scan QR Code again."
+msgstr ""
+"Откройте приложение и нажмите кнопку «Настроить», чтобы снова проверить QR-"
+"код."
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:36
+msgid ""
+"Open your app and click on Green button (your registered email is displayed "
+"on the button) to scan QR Code."
+msgstr ""
+"Откройте приложение и нажмите зеленую кнопку (зарегистрированный адрес "
+"электронной почты отображается на кнопке) для сканирования QR-кода."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1100
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:22
+msgid "Open your miniOrange"
+msgstr "Открыть miniOrange"
+
+#: views/twofa/two-fa-login-option.php:64 views/twofa/two-fa-rba.php:38
+#, fuzzy
+#| msgid "option. "
+msgid "option "
+msgstr "опция. "
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:558
+msgid ""
+"OTP has been expired please initiate a new transaction by clicking on verify "
+"button."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:320
+#: views/twofa/two-fa-login-option.php:531
+#: views/twofa/two-fa-premium-feature.php:96
+#: views/twofa/two-fa-premium-feature.php:176
+msgid "OTP Over Email"
+msgstr "Одноразовый код по электронной почте"
+
+#: controllers/twofa/mo2fa-inline-registration.php:180
+#: handler/twofa/class-mo2fconstants.php:54
+#: views/twofa/two-fa-premium-feature.php:143
+msgid "OTP Over SMS"
+msgstr "Одноразовый код по смс"
+
+#: handler/twofa/class-mo2fconstants.php:57
+#: views/twofa/two-fa-premium-feature.php:93
+#: views/twofa/two-fa-premium-feature.php:173
+msgid "OTP Over SMS And Email"
+msgstr "Одноразовый код по SMS и Email"
+
+#: controllers/twofa/mo2fa-inline-registration.php:306
+msgid "OTP Over SMS and Email"
+msgstr "Одноразовый код по SMS и Email"
+
+#: controllers/twofa/mo2fa-inline-registration.php:222
+msgid "OTP Over TELEGRAM"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:236
+msgid "OTP Over WHATSAPP"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:155
+msgid "OTP Token Background Color:"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:159
+msgid "OTP Token Text Color:"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:261
+msgid "Password and Confirm password do not match."
+msgstr "Пароль и подтверждение не совпадают."
+
+#: controllers/twofa/mo2fa-inline-registration.php:194
+#: views/twofa/two-fa-premium-feature.php:146
+msgid "Phone Call Verification"
+msgstr "Проверка телефонным звонком"
+
+#: controllers/twofa/mo2fa-common-login.php:841
+#: controllers/twofa/mo2fa-common-login.php:1088
+msgid "Phone is Offline?"
+msgstr "Телефон не в сети?"
+
+#: miniorange_2_factor_settings.php:194
+#: handler/class-registrationhandler.php:81
+#, fuzzy
+#| msgid "Phone number :"
+msgid "Phone Number"
+msgstr "Номер телефона:"
+
+#: miniorange_2_factor_settings.php:213
+#: handler/class-registrationhandler.php:100
+msgid "Phone Number Validated"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:340
+#: controllers/twofa/mo2fa-common-login.php:521
+msgid "Please answer the following questions:"
+msgstr "Пожалуйста, ответьте на следующие вопросы:"
+
+#: handler/twofa/class-mo2fconstants.php:297
+msgid "Please answer the following security questions."
+msgstr "Ответьте на следующие секретные вопросы."
+
+#: controllers/twofa/class-mo-2f-ajax.php:512
+#: views/twofa/setup/setup-kba-questions.php:19
+msgid "Please choose 3 questions"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:237
+msgid "Please choose the options from below:"
+msgstr "Выберите следующие варианты из следующих:"
+
+#: controllers/twofa/mo2fa-inline-registration.php:612
+msgid "Please click on 'Configure your phone' button below to see QR Code."
+msgstr ""
+"Пожалуйста, нажмите кнопку «Настроить свой телефон» ниже, чтобы увидеть QR-"
+"код."
+
+#: controllers/twofa/mo2fa-inline-registration.php:728
+msgid ""
+"Please click on 'Configure your phone' button below to setup duo push "
+"notification."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:426
+msgid "Please click on accept link to verify your email."
+msgstr ""
+"Пожалуйста, нажмите на ссылку, чтобы подтвердить свою электронную почту."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2286
+msgid "Please contact to your admin"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:230
+msgid ""
+"Please contact your administrator, to configure DUO push notification, your "
+"administrator needs to enter DUO credentials first after that you can "
+"configure. Click BACK button to configure other method."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:468
+msgid ""
+"Please disable 2FA prompt on WP login page to enable Login with 2nd facor "
+"only."
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1558
+msgid "Please download the backup codes for account recovery."
+msgstr ""
+
+#: handler/twofa/class-mo2f-cloud-onprem-interface.php:44 api/class-two-factor-setup.php:63
+msgid "Please enable curl extension."
+msgstr "Включите расширение curl."
+
+#: handler/twofa/class-mo2fconstants.php:369
+msgid "Please enter a value to test your authentication."
+msgstr "Введите значение для проверки подлинности."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:328
+msgid "Please enter backup code."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:366
+msgid "Please enter email-id to register."
+msgstr "Пожалуйста, введите идентификатор электронной почты для регистрации."
+
+#: views/twofa/setup/setup-duo-authenticator.php:413
+msgid "Please enter required details"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:718
+#: handler/twofa/class-miniorange-password-2factor-login.php:724
+msgid "Please enter the one time passcode below to verify your number."
+msgstr ""
+"Пожалуйста, введите одноразовый код ниже, чтобы подтвердить свой номер."
+
+#: handler/twofa/class-mo2fconstants.php:372
+msgid "Please enter the one time passcode below."
+msgstr "Введите одноразовый код доступа ниже."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:722
+msgid "Please enter the one time passcode sent to your email to verify."
+msgstr ""
+"Пожалуйста, введите одноразовый код, отправленный на ваш email, чтобы "
+"подтвердить его."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1762
+msgid "Please enter the One Time Passcode sent to your phone."
+msgstr "Пожалуйста введите код отправленный на ваш телефон."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:646
+msgid "Please enter your phone number."
+msgstr "Пожалуйста, введите номер своего телефона."
+
+#: handler/twofa/class-mo2fconstants.php:264
+msgid "Please enter your registered email and password."
+msgstr "Введите email который Вы использовали при регистрации и пароль."
+
+#: views/twofa/two-fa-login-option.php:179
+msgid "Please keep it unchecked."
+msgstr "Пожалуйста, сохраните его."
+
+#: handler/twofa/class-mo2fconstants.php:399
+msgid ""
+"Please make sure your System and device have the same time as the displayed "
+"Server time."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:250
+#: handler/twofa/class-miniorange-password-2factor-login.php:3742
+msgid "Please provide backup code."
+msgstr "Предоставьте резервный код."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:225
+msgid "Please provide your backup codes."
+msgstr "Укажите резервные коды."
+
+#: handler/user-profile-2fa.php:157 handler/user-profile-2fa.php:270
+msgid "Please register with miniOrange for using this method."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:30
+msgid "Please scan the QR Code now."
+msgstr "Пожалуйста считайте QR код."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1563
+msgid ""
+"Please set your security questions as an alternate login or backup method."
+msgstr ""
+"Пожалуйста, задайте свои секретные вопросы в качестве альтернативного метода "
+"входа или резервного копирования."
+
+#: handler/twofa/class-mo2fconstants.php:381
+msgid ""
+"Please set your SMTP to get the email to verify the email at the time of "
+"login otherwise you will get logged out"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:348
+msgid "Please submit your query with email"
+msgstr "Отправьте запрос по электронной почте"
+
+#: handler/twofa/class-mo2fconstants.php:315
+msgid "Please try again after some time."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:335
+msgid "Please try again.."
+msgstr "Пожалуйста, попробуйте еще раз.."
+
+#: controllers/twofa/mo2fa-common-login.php:1584
+msgid ""
+"Please use this carefully as each code can only be used once. Please do not "
+"share these codes with anyone."
+msgstr ""
+
+#: miniorange_2_factor_settings.php:209
+#: handler/class-registrationhandler.php:96
+msgid "Please Validate Email and Phone first"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:205
+#: handler/class-registrationhandler.php:92
+msgid "Please Validate Email first"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:204
+#: handler/class-registrationhandler.php:91
+msgid "Please Validate Phone first"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:135
+msgid "Popup Background Color:"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:151
+msgid "Popup Message Background Color:"
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:147
+msgid "Popup Message Text Color:"
+msgstr ""
+
+#: views/twofa/setup-twofa.php:239
+msgid "PREMIUM PLAN"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:354
+msgid "Prompt users to setup 2FA after login? "
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:966 handler/twofa/setup-twofa.php:1031
+msgid "Purchase"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:264
+msgid "Push Notification"
+msgstr "Push-уведомление"
+
+#: views/twofa/two-fa-premium-feature.php:157
+msgid "Push Notifications"
+msgstr "Push уведомления"
+
+#: controllers/twofa/mo2fa-inline-registration.php:250
+#: views/twofa/two-fa-premium-feature.php:154
+msgid "QR Code Authentication"
+msgstr "Аутентификация по QR-коду"
+
+#: handler/twofa/class-mo2fconstants.php:180
+msgid "Query submitted."
+msgstr "Запрос отправлен."
+
+#: controllers/twofa/class-mo-2f-ajax.php:520
+#: views/twofa/setup/setup-kba-questions.php:28
+#, fuzzy
+#| msgid "Question"
+msgid "Questions"
+msgstr "Вопрос"
+
+#: miniorange_2_factor_settings.php:211
+#: handler/class-registrationhandler.php:98
+msgid "Register"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:121
+#: views/twofa/setup/setup-duo-authenticator.php:182
+msgid ""
+"Register push notification as Two Factor Authentication using the below link."
+msgstr ""
+
+#: views/twofa/two-fa-rba.php:40 views/twofa/two-fa-rba.php:42
+msgid "Remember Device"
+msgstr "Запомнить устройство"
+
+#: views/twofa/two-fa-login-option.php:64 views/twofa/two-fa-rba.php:38
+#, fuzzy
+#| msgid "Remember Device."
+msgid "Remember device"
+msgstr "Запомнить устройство."
+
+#: views/twofa/two-fa-rba.php:46
+msgid "Remember Device for"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:68
+#, fuzzy
+#| msgid "Remember this device."
+msgid "Remember this device"
+msgstr "Запомнить это устройство."
+
+#: views/twofa/two-fa-login-option.php:567
+msgid ""
+"Remove Knowledge Based Authentication(KBA) setup during inline registration"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1291
+#: controllers/twofa/mo2fa-inline-registration.php:1772
+msgid "RESEND IT"
+msgstr "Отправить повторно"
+
+#: miniorange_2_factor_settings.php:198
+#: handler/class-registrationhandler.php:85
+#, fuzzy
+#| msgid "Resend OTP ?"
+msgid "Resend OTP "
+msgstr "Отправить повторно одноразовый код?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:449
+#: controllers/twofa/class-mo-2f-ajax.php:492
+#: views/twofa/setup/setup-otp-over-sms.php:61
+#: views/twofa/setup/setup-otp-over-telegram.php:56
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:99
+#: views/twofa/test/test-twofa-otp-over-sms.php:34
+#: views/twofa/test/test-twofa-otp-over-telegram.php:32
+msgid "Resend OTP?"
+msgstr ""
+
+#: miniorange_2_factor_settings.php:581
+msgid "Reset 2 Factor"
+msgstr "Сброс 2-го фактора"
+
+#: views/twofa/setup/setup-duo-authenticator.php:143
+msgid "Reset Duo Configuration"
+msgstr ""
+
+#: views/twofa/two-fa-shortcode.php:127
+msgid "Restrict IP"
+msgstr ""
+
+#: handler/user-profile-2fa.php:280
+#: controllers/twofa/mo2fa-inline-registration.php:1304
+#: controllers/twofa/mo2fa-inline-registration.php:1568
+#: views/twofa/setup/setup-duo-authenticator.php:447
+#: views/twofa/setup/setup-kba-questions.php:194
+msgid "Save"
+msgstr "Сохранить"
+
+#: views/twofa/two-fa-login-option.php:188
+#: views/twofa/two-fa-login-option.php:193 views/twofa/two-fa-rba.php:78
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:24
+msgid "SCAN QR Code"
+msgstr "Сканировать QR-код"
+
+#: controllers/twofa/mo2fa-common-login.php:1057
+msgid "Scan QR Code"
+msgstr "Сканировать QR-код"
+
+#: controllers/twofa/mo2fa-inline-registration.php:915
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:159
+#: views/twofa/setup/setup-google-authenticator.php:55
+msgid "Scan the QR code from the Authenticator App."
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:284
+#: views/twofa/setup/setup-duo-authenticator.php:358
+#: views/twofa/setup/setup-miniorange-authenticator.php:130
+msgid "Search for"
+msgstr "Искать"
+
+#: views/twofa/setup/setup-duo-authenticator.php:303
+#: views/twofa/setup/setup-duo-authenticator.php:377
+#: views/twofa/setup/setup-miniorange-authenticator.php:149
+msgid "Search for "
+msgstr "Искать "
+
+#: views/class-mo2f-setup-wizard.php:560
+msgid "Seconds"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:434
+msgid "Secret Key"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:436
+msgid "Secret key"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:42
+msgid "Security Questions"
+msgstr "Секретные вопросы"
+
+#: controllers/twofa/mo2fa-inline-registration.php:292
+#: handler/twofa/class-miniorange-authentication.php:484
+msgid "Security Questions ( KBA )"
+msgstr "Секретные вопросы"
+
+#: views/twofa/two-fa-premium-feature.php:168
+msgid "Security Questions (KBA)"
+msgstr "Секретные вопросы"
+
+#: views/twofa/two-fa-login-option.php:382
+#: views/twofa/two-fa-login-option.php:393
+#: views/twofa/two-fa-login-option.php:457
+#: views/twofa/two-fa-login-option.php:469
+msgid "See Preview"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:89
+#: views/twofa/two-fa-login-option.php:120
+#: views/twofa/two-fa-unlimitted-user.php:140
+msgid "See preview"
+msgstr "Предпросмотр"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:61
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:195
+#: views/twofa/setup/setup-google-authenticator.php:86
+msgid "Select"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:940
+msgid "Select \"Enter provided key\""
+msgstr "Выберите \"Введите предоставленный ключ\""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:37
+#: views/twofa/setup/setup-google-authenticator.php:59
+msgid "Select \"Scan a barcode\"."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:918
+msgid ""
+"Select \"Scan a barcode\". Use your phone's camera to scan this barcode."
+msgstr ""
+"Выберите \"Сканировать штрих-код\". Используйте камеру своего телефона для "
+"сканирования этого штрих-кода."
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:163
+msgid "Select \"Scan a QR code\"."
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:39
+msgid "Select 2 Factor method for authentication"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:63
+msgid "Select 2FA Methods"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:38
+msgid "Select Login Screen Options"
+msgstr "Выберите параметры экрана входа в систему"
+
+#: views/upgrade.php:1262
+#, fuzzy
+#| msgid ""
+#| "Select the number of users you wish to upgrade for, and any add-ons if "
+#| "you wish to purchase, and make the payment."
+msgid ""
+"Select the number of users/sites you wish to upgrade for, and any add-ons if "
+"you wish to purchase, and make the payment."
+msgstr ""
+"Выберите количество пользователей, которые вы хотите обновить, и любые "
+"надстройки, если вы хотите приобрести, и внесите платеж."
+
+#: views/twofa/two-fa-premium-feature.php:43
+msgid "Select the specific set of authentication methods for your users"
+msgstr ""
+"Выберите определенный набор методов проверки подлинности для ваших "
+"пользователей"
+
+#: controllers/twofa/class-mo-2f-ajax.php:534
+#: controllers/twofa/class-mo-2f-ajax.php:574
+#: views/twofa/setup/setup-kba-questions.php:43
+#: views/twofa/setup/setup-kba-questions.php:83
+msgid "Select your question"
+msgstr "Введите свой вопрос"
+
+#: controllers/twofa/mo2fa-common-login.php:242
+msgid "Send a one time passcode to my registered email"
+msgstr "Отправить одноразовый код на мой email"
+
+#: controllers/twofa/mo2fa-common-login.php:384
+#: controllers/twofa/mo2fa-common-login.php:651
+#: controllers/twofa/mo2fa-common-login.php:857
+#: controllers/twofa/mo2fa-common-login.php:1096
+#: controllers/twofa/mo2fa-common-login.php:1335
+msgid "Send backup codes on email"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:139
+#: views/twofa/setup/setup-duo-authenticator.php:201
+msgid "Send Me Push Notification"
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:129
+msgid "Send Me Push Notification Button."
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:122
+#: views/twofa/setup/setup-duo-authenticator.php:183
+#: views/twofa/setup/setup-duo-authenticator.php:190
+msgid "Send Me Push Notification."
+msgstr ""
+
+#: controllers/twofa/class-mo-2f-ajax.php:437
+#: controllers/twofa/class-mo-2f-ajax.php:480
+#: controllers/twofa/mo2fa-inline-registration.php:1746
+msgid "Send OTP"
+msgstr "Выслать одноразовый код"
+
+#: miniorange_2_factor_settings.php:196
+#: handler/class-registrationhandler.php:83
+msgid "Send OTP "
+msgstr ""
+
+#: miniorange_2_factor_settings.php:192
+#: handler/class-registrationhandler.php:79
+msgid "Sending OTP "
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:161
+msgid "Settings"
+msgstr "Настройки"
+
+#: controllers/twofa/mo2fa-inline-registration.php:873
+msgid "Setup Authenticator"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:711
+msgid "Setup Duo"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:69
+msgid "Setup Finish"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:601
+msgid "Setup miniOrange"
+msgstr "Настройка miniOrange"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1291
+msgid "Setup Security Question (KBA)"
+msgstr "Настроить секретные вопросы"
+
+#: views/class-mo2f-setup-wizard.php:510
+msgid ""
+"Should users be given a grace period or should they be directly enforced for "
+"2FA setup?"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:572
+msgid "Show specific 2FA methods to All Users"
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:574
+msgid "Show specific 2FA methods to Users based on their roles"
+msgstr ""
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:24
+msgid "shown in the App under your account."
+msgstr ""
+
+#: handler/twofa/class-miniorange-authentication.php:503
+#: handler/twofa/class-miniorange-authentication.php:589
+#: handler/twofa/class-miniorange-authentication.php:616
+msgid "Skip Setup"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:202
+msgid "Skip Setup Wizard"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:351
+#, fuzzy
+#| msgid "Setup Two Factor"
+msgid "Skip Two Factor"
+msgstr "Настройка 2 фактора"
+
+#: handler/twofa/class-miniorange-authentication.php:473
+msgid "SMS verification (Registration Required)"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:208
+#: views/twofa/two-fa-premium-feature.php:151
+msgid "Soft Token"
+msgstr "Токен"
+
+#: handler/twofa/class-mo2fconstants.php:480
+msgid "Something went wrong"
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:78
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:212
+#: views/twofa/setup/setup-google-authenticator.php:103
+msgid "Spaces do not matter"
+msgstr "Пространства не имеют значения"
+
+#: controllers/twofa/mo2fa-inline-registration.php:948
+#: views/twofa/setup/setup-authy-authenticator.php:72
+msgid "Spaces don't matter."
+msgstr "Пространства не имеют значения."
+
+#: views/twofa/two-fa-premium-feature.php:50
+msgid "Specific Roles"
+msgstr "Определенные роли"
+
+#: controllers/twofa/class-mo-2f-ajax.php:517
+#: views/twofa/setup/setup-kba-questions.php:25
+#, fuzzy
+#| msgid "Sl. No."
+msgid "Sr. No."
+msgstr "Sl. No."
+
+#: views/twofa/setup/setup-duo-authenticator.php:269
+#: views/twofa/setup/setup-duo-authenticator.php:343
+msgid "Step-1 : Download the Duo"
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:25
+msgid "Step-1: Configure Authy Authenticator App."
+msgstr ""
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:134
+msgid "Step-1: Set up Google/Authy/Microsoft Authenticator"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:611
+msgid "Step-2 : Scan QR code"
+msgstr "Шаг-2 : Сканирование QR кода"
+
+#: views/twofa/setup/setup-miniorange-authenticator.php:55
+msgid "Step-2 : Select method"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:727
+msgid "Step-2 : Setup Duo Push Notification"
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:48
+msgid "Step-2: Set up Authy 2-Factor Authentication App"
+msgstr "Шаг-2: Настроить двухфакторную аутентификацию через Authy"
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:231
+#: views/twofa/setup/setup-google-authenticator.php:122
+msgid "Step-2: Verify and Save"
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:82
+msgid "Step-3: Verify and Save"
+msgstr "Шаг-3. Проверка и сохранение"
+
+#: views/upgrade.php:1249
+msgid "Steps to upgrade to the Premium Plan :"
+msgstr ""
+
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:53
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:104
+msgid "Submit"
+msgstr "Отправить"
+
+#: handler/twofa/class-mo2fconstants.php:219
+msgid "Successfully Validated"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:27
+msgid "Successfully validated."
+msgstr "Успешно проверено."
+
+#: controllers/twofa/mo2fa-inline-registration.php:952
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:86
+#: views/twofa/setup/setup-google-authenticator.php:111
+msgid "Tap Add."
+msgstr "Нажмите «Добавить»."
+
+#: controllers/twofa/mo2fa-inline-registration.php:939
+msgid "Tap Menu and select \"Set up account.\""
+msgstr ""
+
+#: views/twofa/setup/setup-authy-authenticator.php:75
+msgid "Tap OK."
+msgstr "Нажмите ОК."
+
+#: views/twofa/setup/setup-authy-authenticator.php:54
+msgid ""
+"Tap on Add Account and then tap on SCAN QR CODE in your App and scan the qr "
+"code."
+msgstr ""
+"Нажмите «Добавить учетную запись», а затем нажмите СКАНИРОВАТЬ QR-КОД в "
+"своем приложении и отсканируйте qr код."
+
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:58
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:192
+#: views/twofa/setup/setup-google-authenticator.php:83
+msgid "Tap on Menu and select"
+msgstr ""
+
+#. %s: Name of the 2fa method
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:26
+#, php-format
+msgid "Test %s"
+msgstr ""
+
+#. %s: Name of the 2fa method
+#: views/twofa/test/test-twofa-google-authy-authenticator.php:84
+#, php-format
+msgid "Test %s."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1181
+#: views/twofa/setup/setup-duo-authenticator.php:43
+#: views/twofa/test/test-twofa-duo-authenticator.php:19
+#, fuzzy
+#| msgid "Test Google Authenticator"
+msgid "Test Duo Authenticator"
+msgstr "Проверка Google Authenticator"
+
+#: views/twofa/test/test-twofa-email-verification.php:24
+msgid "Test Email Verification"
+msgstr "Проверка через Email"
+
+#: views/twofa/test/test-twofa-otp-over-sms.php:19
+msgid "Test OTP Over SMS"
+msgstr "Проверить одноразовый код по SMS"
+
+#: views/twofa/test/test-twofa-otp-over-telegram.php:19
+msgid "Test OTP Over Telegram"
+msgstr ""
+
+#: views/twofa/test/test-twofa-miniorange-push-notification.php:20
+msgid "Test Push Notification"
+msgstr "Тест Push-уведомления"
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:20
+msgid "Test QR Code Authentication"
+msgstr "Проверка аутентификация по QR-коду"
+
+#: views/twofa/test/test-twofa-kba-questions.php:22
+msgid "Test Security Questions( KBA )"
+msgstr "Проверить секретные вопросы"
+
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:19
+msgid "Test Soft Token"
+msgstr "Проверить Токен"
+
+#: handler/twofa/class-mo2fconstants.php:354
+msgid "Thanks for getting in touch! We shall get back to you shortly."
+msgstr "Спасибо, что связались! Мы скоро ответим Вам."
+
+#. %s: bold tags
+#: views/upgrade.php:1307
+#, php-format
+msgid ""
+"The %1$1slicense key %2$2sis required to activate the premium Plugins. You "
+"will have to login with the miniOrange Account you used to make the purchase "
+"then enter license key to activate plugin."
+msgstr ""
+
+#: views/twofa/two-fa-shortcode.php:85
+msgid ""
+"The Admin can enable IP restrictions for the users. It will provide "
+"additional security to the accounts and perform different action to the "
+"accounts only from the listed IP Ranges. If user tries to access with a "
+"restricted IP, Admin can set three action: Allow, challenge or deny. "
+"Depending upon the action it will allow the user to login, challenge(prompt) "
+"for authentication or deny the access."
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:274
+#: handler/twofa/class-miniorange-password-2factor-login.php:294
+msgid "The code you provided is already used or incorrect."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:153
+msgid "The customer is not valid"
+msgstr "Клиент недействителен"
+
+#: handler/twofa/class-miniorange-authentication.php:3096
+msgid ""
+"The email associated with your account is already registered in miniOrange. "
+"Please Choose another email or contact miniOrange."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:460
+#: handler/twofa/class-miniorange-password-2factor-login.php:1303
+msgid ""
+"The email associated with your account is already registered. Please contact "
+"your admin to change the email."
+msgstr ""
+"Электронная почта, связанная с вашей учетной записью, уже зарегистрирована. "
+"Чтобы изменить адрес электронной почты, свяжитесь с администратором."
+
+#: handler/twofa/class-mo2fconstants.php:345
+msgid ""
+"The email is already used by other user. Please register with other email."
+msgstr ""
+"Email уже используется другим пользователем. Пожалуйста, зарегистрируйтесь с "
+"другим email."
+
+#: handler/twofa/class-mo2fconstants.php:75
+msgid ""
+"The email transaction limit has been exceeded. Please refer to the Licensing "
+"Plans tab for purchasing your SMS transactions."
+msgstr ""
+"Превышен лимит транзакций электронной почты. См. Вкладку «Тарифные планы» "
+"для покупки транзакций SMS."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:718
+msgid "The One Time Passcode has been sent to"
+msgstr "Одноразовый код был отправлен на"
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:722
+msgid "The One Time Passcode has been sent to "
+msgstr "Одноразовый код был отправлен на "
+
+#: handler/twofa/class-mo2fconstants.php:477
+msgid "The OTP has been sent to"
+msgstr "Одноразовый код был отправлен на"
+
+#: views/upgrade.php:1302
+#, fuzzy
+#| msgid ""
+#| "The plugin works with many of the default custom login forms (like "
+#| "Woocommerce / Theme My Login), however if you face any issues with your "
+#| "custom login form, contact us and we will help you with it."
+msgid ""
+"The plugin works with many of the default custom login forms (like "
+"Woocommerce/Theme My Login/Login With Ajax/User Pro/Elementor), however if "
+"you face any issues with your custom login form, contact us and we will help "
+"you with it."
+msgstr ""
+"Плагин работает со многими стандартными форматами входа по умолчанию "
+"(например, Woocommerce / Theme My Login), однако, если вы столкнулись с "
+"любыми проблемами с вашей пользовательской формой входа, свяжитесь с нами, и "
+"мы поможем вам с этим."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:778
+msgid "The questions you select must be unique."
+msgstr "Выбранные вопросы должны быть уникальными."
+
+#: handler/twofa/class-mo2fconstants.php:72
+msgid ""
+"The sms transaction limit has been exceeded. Please refer to the Licensing "
+"Plans tab for purchasing your SMS transactions."
+msgstr ""
+"Превышен предел транзакций sms. См. Вкладку «Тарифные планы» для покупки "
+"транзакций SMS."
+
+#: handler/twofa/class-mo2fconstants.php:63
+msgid ""
+"The total transaction limit has been exceeded. Please upgrade your premium "
+"plan."
+msgstr "Превышен общий предел транзакции. Обновите план премиум-класса."
+
+#: handler/twofa/class-mo2fconstants.php:483
+msgid "The transaction limit has been exceeded."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:66
+msgid "The transaction limit has exceeded."
+msgstr "Превышен лимит транзакции."
+
+#: handler/twofa/class-mo2fconstants.php:156
+msgid "The user is not valid "
+msgstr "Пользователь недействителен "
+
+#: handler/twofa/class-mo2fconstants.php:93
+msgid "There was an error during sending an SMS."
+msgstr "При отправке SMS произошла ошибка."
+
+#: handler/twofa/class-mo2fconstants.php:321
+msgid "There was an error fetching security questions. Please try again."
+msgstr ""
+"Возникла ошибка, связанная с секретными вопросами. Пожалуйста, попробуйте "
+"еще раз."
+
+#: handler/twofa/class-mo2fconstants.php:342
+msgid ""
+"There was an error in sending email. Please click on Resend OTP to try again."
+msgstr ""
+"При отправке электронного письма произошла ошибка. Нажмите кнопку повторной "
+"отправки, чтобы повторить попытку."
+
+#: handler/twofa/class-mo2fconstants.php:378
+msgid ""
+"There was an error in sending one-time passcode. Please check your SMTP "
+"Setup and remaining transactions."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:375
+msgid ""
+"There was an error in sending one-time passcode. Your transaction limit "
+"might have exceeded. Please contact miniOrange or upgrade to our premium "
+"plan."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:270
+msgid ""
+"There was an error in sending OTP over email. Please click on Resend OTP to "
+"try again."
+msgstr ""
+"При отправке одноразового кода по email произошла ошибка. Нажмите "
+"\"Отправить повторно\", чтобы повторить попытку."
+
+#: handler/twofa/class-mo2fconstants.php:282
+msgid ""
+"There was an error in sending sms. Please click on Resend OTP to try again."
+msgstr ""
+"При отправке смс произошла ошибка. Нажмите отправить снова, чтобы повторить "
+"попытку."
+
+#: handler/twofa/class-mo2fconstants.php:99
+msgid "There was an error processing the challenge user request."
+msgstr "Произошла ошибка при обработке запроса пользователя вызов."
+
+#: handler/twofa/class-mo2fconstants.php:231
+msgid "There was an error processing the register mobile request."
+msgstr "Произошла ошибка при обработке запроса на регистрацию."
+
+#: handler/twofa/class-mo2fconstants.php:234
+msgid "There was an exception processing the get user request."
+msgstr "Исключение произошло при обработке запроса пользователя."
+
+#: handler/twofa/class-mo2fconstants.php:204
+msgid "There was an exception processing the update user request."
+msgstr "Исключение составляло запрос пользователя обновления."
+
+#: views/twofa/two-fa-login-option.php:590
+msgid "These are the options customizable for your users."
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:27
+msgid ""
+"This helps you to modify and redesign the 2FA prompt to match according to "
+"your website and various customizations in the plugin dashboard."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:155
+msgid ""
+"This option will provide you an alternate way of logging in to your site in "
+"case you are unable to login with your primary authentication method."
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1043 views/twofa/two-fa-shortcode.php:26
+msgid ""
+"This shortcode provides an option to configure the Google Authenticator and "
+"Security Questions by user."
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:1040 views/twofa/two-fa-shortcode.php:23
+msgid "This shortcode provides an option to turn on/off 2-factor by user."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This TFA plugin provides various two-factor authentication methods as an "
+"additional layer of security after the default WordPress login. We Support "
+"Google/Authy/LastPass/Microsoft Authenticator, QR Code, Push Notification, "
+"Soft Token and Security Questions(KBA) for 3 User in the free version of the "
+"plugin."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:225
+msgid "This username already exists. Please select a different username."
+msgstr ""
+
+#: views/twofa/two-fa-custom-login.php:63
+msgid ""
+"This will be the Plugin Name You and your Users see in  WordPress Dashboard."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:193
+msgid ""
+"This wizard will assist you with plugin configuration and the 2FA settings "
+"for you and the users on this website."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:456
+msgid "to configure another 2 Factor authentication method."
+msgstr "для настройки другого двухфакторного метода проверки подлинности."
+
+#: views/twofa/setup/setup-duo-authenticator.php:129
+#: views/twofa/setup/setup-duo-authenticator.php:190
+msgid ""
+"to configure DUO Push Notification. Once done with registration click on "
+msgstr ""
+
+#: views/twofa/setup/setup-duo-authenticator.php:416
+msgid "to create an account."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1100
+#: views/twofa/setup/setup-miniorange-authenticator.php:184
+msgid ""
+"to scan the QR Code. Your phone should have internet connectivity to scan QR "
+"code."
+msgstr ""
+"для сканирования QR-кода. Ваш телефон должен иметь возможность подключения к "
+"Интернету для сканирования QR-кода."
+
+#: views/twofa/test/test-twofa-miniorange-qrcode-authentication.php:24
+msgid ""
+"to scan the QR code. Your phone should have internet connectivity to scan QR "
+"code."
+msgstr ""
+"для сканирования QR-кода. Ваш телефон должен иметь возможность подключения к "
+"Интернету для сканирования QR-кода."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1595
+msgid "to sign-in to your account."
+msgstr "для входа в свою учетную запись."
+
+#: handler/twofa/class-mo2fconstants.php:414
+msgid "to test"
+msgstr "тестировать"
+
+#: handler/twofa/class-mo2fconstants.php:408
+msgid "to test Authy 2-Factor Authentication method."
+msgstr "для тестирования Authy 2-Factor Authentication."
+
+#: handler/twofa/class-mo2fconstants.php:390
+msgid "to test Google Authenticator method."
+msgstr "для проверки метода Google Authenticator."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2297
+msgid ""
+"Transaction has been successfully validated. Please continue with the "
+"transaction."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:78
+msgid "Transaction limit exceeded. Please contact your administrator"
+msgstr "Превышен предел транзакции. Обратитесь к администратору"
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2298
+msgid "TRANSACTION SUCCESSFUL"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:1553
+#: controllers/twofa/mo2fa-inline-registration.php:1521
+msgid "Two Factor Setup Complete"
+msgstr "Настройка двухфакторной аутентификации завершена"
+
+#: handler/twofa/class-mo2fconstants.php:444
+msgid "Two-Factor plugin has been disabled."
+msgstr "Двухфакторный плагин отключен."
+
+#: handler/twofa/class-mo2fconstants.php:312
+msgid ""
+"Unable to generate backup codes. Please check your internet and try again."
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:390
+#: controllers/twofa/mo2fa-common-login.php:657
+#: controllers/twofa/mo2fa-common-login.php:863
+#: controllers/twofa/mo2fa-common-login.php:1102
+#: controllers/twofa/mo2fa-common-login.php:1341
+msgid "Use Backup Codes"
+msgstr "Использовать резервные коды"
+
+#: views/twofa/two-fa-login-option.php:603
+msgid ""
+"Use the Password generated in the 2FA plugin to login to your WordPress Site "
+"from any application that supports XML-RPC."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:357
+#: views/twofa/two-fa-login-option.php:525
+msgid ""
+"Use these backup options to login to your site in case your phone is lost / "
+"not accessible or if you are not able to login using your primary "
+"authentication method."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:303
+msgid "User Limit is reached for your domain."
+msgstr ""
+
+#: views/twofa/two-fa-login-option.php:583
+msgid "User Login Options"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:198
+msgid "Username cannot be blank."
+msgstr "Имя пользователя не может быть пустым."
+
+#: views/class-mo2f-setup-wizard.php:517
+msgid "Users should be directly enforced for 2FA setup."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:363
+msgid "Users should setup 2FA after first login."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:369
+msgid "Users will setup 2FA in plugin dashboard"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:369
+#: controllers/twofa/mo2fa-common-login.php:532
+#: controllers/twofa/mo2fa-common-login.php:1299
+msgid "Validate"
+msgstr "Проверить"
+
+#: views/twofa/test/test-twofa-kba-questions.php:56
+msgid "Validate Answers"
+msgstr "Проверить ответы"
+
+#: controllers/twofa/mo2fa-common-login.php:502
+msgid "Validate Backup Code"
+msgstr "Проверить код резервной копии"
+
+#: controllers/twofa/mo2fa-common-login.php:1252
+#: views/twofa/setup/setup-otp-over-sms.php:66
+#: views/twofa/setup/setup-otp-over-telegram.php:61
+#: views/twofa/test/test-twofa-miniorange-soft-token.php:37
+#: views/twofa/test/test-twofa-otp-over-sms.php:39
+#: views/twofa/test/test-twofa-otp-over-telegram.php:37
+msgid "Validate OTP"
+msgstr "Проверка одноразового кода"
+
+#: miniorange_2_factor_settings.php:199
+#: handler/class-registrationhandler.php:86
+msgid "Validate OTP "
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:330
+msgid "Validate Security Questions"
+msgstr "Проверка секретных вопросов"
+
+#: views/twofa/setup/setup-otp-over-sms.php:50
+#: views/twofa/setup/setup-otp-over-telegram.php:46
+msgid "Verify"
+msgstr "Проверить"
+
+#: handler/user-profile-2fa.php:206 handler/user-profile-2fa.php:257
+#: controllers/twofa/mo2fa-inline-registration.php:957
+#: controllers/twofa/mo2fa-inline-registration.php:965
+#: views/twofa/setup/setup-authy-authenticator.php:98
+#: views/twofa/setup/setup-google-authenticator-onpremise.php:249
+#: views/twofa/setup/setup-google-authenticator.php:139
+msgid "Verify and Save"
+msgstr "Проверка и сохранение"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1776
+msgid "Verify Code"
+msgstr "Проверить код"
+
+#: views/twofa/two-fa-login-option.php:566
+msgid "Verify Email address of User during Inline Registration"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:1673
+msgid "Verify Your EMAIL"
+msgstr "Подтвердить свою электронную почту"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1677
+msgid "Verify Your Phone"
+msgstr "Проверка телефонного номера"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1667
+msgid "Verify Your Phone and Email"
+msgstr "Проверка телефонного номера и Email"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1670
+msgid "Verify Your Telegram Details"
+msgstr ""
+
+#: controllers/twofa/mo2fa-common-login.php:616
+#: controllers/twofa/mo2fa-common-login.php:819
+msgid "Waiting for your approval..."
+msgstr "Ожидание вашего подтверждения…"
+
+#: controllers/twofa/mo2fa-inline-registration.php:1189
+#: views/twofa/setup/setup-duo-authenticator.php:51
+#: views/twofa/test/test-twofa-duo-authenticator.php:27
+#: views/twofa/test/test-twofa-email-verification.php:32
+#: views/twofa/test/test-twofa-miniorange-push-notification.php:26
+msgid "We are waiting for your approval..."
+msgstr "Мы ждем Вашего подтверждения…"
+
+#: views/class-mo2f-setup-wizard.php:58
+msgid "Welcome"
+msgstr ""
+
+#: controllers/twofa/class-mo-2f-ajax.php:544
+#: controllers/twofa/class-mo-2f-ajax.php:584
+#: handler/twofa/class-mo2fconstants.php:111
+#: views/twofa/setup/setup-kba-questions.php:53
+#: views/twofa/setup/setup-kba-questions.php:93
+msgid "What is the name of your favorite childhood friend?"
+msgstr "Как зовут вашего любимого друга детства?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:550
+#: controllers/twofa/class-mo-2f-ajax.php:590
+#: handler/twofa/class-mo2fconstants.php:123
+#: views/twofa/setup/setup-kba-questions.php:59
+#: views/twofa/setup/setup-kba-questions.php:99
+msgid "What is your favourite sport?"
+msgstr "Какой твой любимый вид спорта?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:538
+#: controllers/twofa/class-mo-2f-ajax.php:578
+#: handler/twofa/class-mo2fconstants.php:102
+#: views/twofa/setup/setup-kba-questions.php:47
+#: views/twofa/setup/setup-kba-questions.php:87
+msgid "What is your first company name?"
+msgstr "Как Вас зовут?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:554
+#: controllers/twofa/class-mo-2f-ajax.php:594
+#: handler/twofa/class-mo2fconstants.php:117
+#: views/twofa/setup/setup-kba-questions.php:63
+#: views/twofa/setup/setup-kba-questions.php:103
+msgid "What is your grandmother's maiden name?"
+msgstr "Девичья фамилия вашей бабушки?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:546
+#: controllers/twofa/class-mo-2f-ajax.php:586
+#: handler/twofa/class-mo2fconstants.php:129
+#: views/twofa/setup/setup-kba-questions.php:55
+#: views/twofa/setup/setup-kba-questions.php:95
+msgid "What school did you attend for sixth grade?"
+msgstr "В какой школе вы перешли в шестой класс?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:540
+#: controllers/twofa/class-mo-2f-ajax.php:580
+#: handler/twofa/class-mo2fconstants.php:105
+#: views/twofa/setup/setup-kba-questions.php:49
+#: views/twofa/setup/setup-kba-questions.php:89
+msgid "What was your childhood nickname?"
+msgstr "Какая у тебя было детское прозвище?"
+
+#: controllers/twofa/class-mo-2f-ajax.php:556
+#: controllers/twofa/class-mo-2f-ajax.php:596
+#: handler/twofa/class-mo2fconstants.php:114
+#: views/twofa/setup/setup-kba-questions.php:65
+#: views/twofa/setup/setup-kba-questions.php:105
+msgid "What was your first vehicle's registration number?"
+msgstr "Какой регистрационный номер вашего первого автомобиля?"
+
+#: views/twofa/two-fa-rba.php:74
+msgid ""
+"When a user logs in using the remembered device, the 2nd factor will be "
+"skipped and the user will only need to provide their username and password "
+"to log in."
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:511
+msgid ""
+"When you configure the 2FA policies and require users to configure 2FA, they "
+"can either have a grace period to configure 2FA (users who don't have 2fa "
+"setup after grace period, will be enforced to setup 2FA ). Choose which "
+"method you'd like to use:"
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:383
+msgid ""
+"When you enable 2FA, the users will be prompted to configure 2FA the next "
+"time they login. Users have a grace period for configuring 2FA. You can "
+"configure the grace period and also exclude role(s) in this settings page. "
+msgstr ""
+
+#: views/class-mo2f-setup-wizard.php:356
+msgid ""
+"When you enable this, the users will be prompted to set up the 2FA method "
+"after entering username and password. Users can select from the list of all "
+"2FA methods. Once selected, user will setup and will login to the site "
+msgstr ""
+
+#: controllers/twofa/class-mo-2f-ajax.php:552
+#: controllers/twofa/class-mo-2f-ajax.php:592
+#: handler/twofa/class-mo2fconstants.php:120
+#: views/twofa/setup/setup-kba-questions.php:61
+#: views/twofa/setup/setup-kba-questions.php:101
+msgid "Who is your favourite sports player?"
+msgstr "Кто твой любимый спортивный игрок?"
+
+#: handler/twofa/setup-twofa.php:990
+msgid ""
+"With this feature, you can customize the login pop-ups during two factor "
+"authentication according to the theme of                 your website."
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:981
+msgid ""
+"With this feature, you can customize the name of the plugin in the dashboard."
+msgstr ""
+
+#: handler/twofa/setup-twofa.php:975
+msgid ""
+"With this feature, you can customize the plugin icon in the dashboard which "
+"is useful when you want your custom logo to be displayed to the users."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:453
+msgid "You already have an account with miniOrange, please sign in."
+msgstr ""
+"У вас уже есть учетная запись с miniOrange, пожалуйста, войдите в систему."
+
+#: handler/twofa/class-mo2fconstants.php:249
+msgid ""
+"You already have an account with miniOrange. Please enter a valid password."
+msgstr ""
+"У вас уже есть учетная запись с miniOrange. Пожалуйста, введите правильный "
+"пароль."
+
+#: handler/twofa/class-mo2fconstants.php:192
+msgid ""
+"You are not authorized to create users. Please upgrade to premium plan. "
+msgstr ""
+"У вас нет прав на создание пользователей. Обновите план премиум-класса. "
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:2285
+msgid "You are not authorized to perform this action"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:171
+msgid "You are not authorized to perform this operation."
+msgstr "Вы не авторизованы для выполнения этой операции."
+
+#: handler/twofa/class-mo2fconstants.php:435
+msgid "You are registered successfully."
+msgstr "Вы зарегистрированы успешно."
+
+#: views/twofa/two-fa-custom-login.php:74
+msgid "You can change the templates for Email and SMS as per your requirement."
+msgstr ""
+"Вы можете изменить шаблоны для электронной почты и SMS в соответствии с "
+"вашими требованиями."
+
+#: handler/twofa/setup-twofa.php:999
+msgid ""
+"You can change the templates for Email and SMS which user receives during "
+"authentication."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:300
+msgid "You have already downloaded the backup codes for this domain."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:441
+msgid ""
+"You have denied the request or you have not set duo push notification yet"
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:438
+msgid "You have denied the request."
+msgstr "Вы отклонили запрос."
+
+#: handler/twofa/class-mo2fconstants.php:240
+msgid "You have successfully completed the test."
+msgstr "Вы успешно завершили тест."
+
+#: controllers/twofa/mo2fa-inline-registration.php:1589
+msgid "You have successfully set up "
+msgstr "Вы успешно настроили "
+
+#: controllers/twofa/mo2fa-inline-registration.php:290
+#: handler/twofa/class-miniorange-authentication.php:481
+msgid ""
+"You have to answers some knowledge based security questions which are only "
+"known to you to authenticate yourself. Supported in Desktops,Laptops,"
+"Smartphones."
+msgstr ""
+"Вы должны отвечать на некоторые вопросы безопасности, основанные на знаниях, "
+"которые вам известны только для аутентификации. Поддерживается на "
+"персональных компьютерах, ноутбуках, смартфонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:138
+msgid ""
+"You have to enter 6 digits code generated by Authenticator App to login. "
+"Supported in Smartphones only."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:276
+msgid ""
+"You have to enter 6 digits code generated by Authy 2-Factor Authentication "
+"App to login. Supported in Smartphones only."
+msgstr ""
+"Для входа вы должны ввести 6-значный код, сгенерированный Authy 2-Factor "
+"Authentication App. Поддерживается только в смартфонах."
+
+#: handler/twofa/class-miniorange-authentication.php:466
+#, fuzzy
+#| msgid ""
+#| "You have to enter 6 digits code generated by Google Authenticator App to "
+#| "login. Supported in Smartphones only."
+msgid ""
+"You have to enter 6 digits code generated by google Authenticator App to "
+"login. Supported in Smartphones only."
+msgstr ""
+"Для входа вы должны ввести 6-значный код, сгенерированный Google "
+"Authenticator App. Поддерживается только в смартфонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:206
+msgid ""
+"You have to enter 6 digits code generated by miniOrange Authenticator App "
+"like Google Authenticator code to login. Supported in Smartphones only."
+msgstr ""
+"Для входа в систему необходимо ввести 6-значный код, созданный приложением "
+"miniOrange Authenticator, например кодом Google Authenticator. "
+"Поддерживается только в смартфонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:248
+msgid ""
+"You have to scan the QR Code from your phone using miniOrange Authenticator "
+"App to login. Supported in Smartphones only."
+msgstr ""
+"Вам необходимо отсканировать QR-код с вашего телефона с помощью приложения "
+"miniOrange Authenticator для входа в систему. Поддерживается только в "
+"смартфонах."
+
+#: handler/twofa/class-mo2fconstants.php:309
+msgid "You have used all of the backup codes"
+msgstr ""
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:298
+msgid ""
+"You have used all the backup codes. Please contact <a href=\"mailto:"
+"2fasupport@xecurify.com\">2fasupport@xecurify.com</a>"
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:220
+#: handler/twofa/class-miniorange-authentication.php:488
+msgid "You will get an OTP on your TELEGRAM app from miniOrange Bot."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:234
+msgid "You will get an OTP on your WHATSAPP app from miniOrange Bot."
+msgstr ""
+
+#: controllers/twofa/mo2fa-inline-registration.php:318
+#: handler/twofa/class-miniorange-authentication.php:475
+msgid ""
+"You will receive a one time passcode on your email. You have to enter the "
+"otp on your screen to login. Supported in Smartphones, Feature Phones."
+msgstr ""
+"Вы получите одноразовый код на своем электронном письме. Вы должны ввести "
+"одноразовый код на своем экране для входа в систему. Поддерживается в "
+"смартфонах, функциональных телефонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:304
+msgid ""
+"You will receive a one time passcode via SMS on your phone and your email. "
+"You have to enter the otp on your screen to login. Supported in Smartphones, "
+"Feature Phones."
+msgstr ""
+"Вы получите одноразовый код через SMS на свой телефон и электронную почту. "
+"Вы должны ввести одноразовый код на своем экране для входа в систему. "
+"Поддерживается в смартфонах, функциональных телефонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:178
+#: handler/twofa/class-miniorange-authentication.php:470
+msgid ""
+"You will receive a one time passcode via SMS on your phone. You have to "
+"enter the otp on your screen to login. Supported in Smartphones, Feature "
+"Phones."
+msgstr ""
+"Вы получите одноразовый код через SMS на своем телефоне. Вы должны ввести "
+"одноразовый код на своем экране для входа в систему. Поддерживается в "
+"смартфонах, функциональных телефонах."
+
+#: handler/twofa/class-miniorange-password-2factor-login.php:724
+msgid "You will receive a phone call on this number "
+msgstr "Вы получите телефонный звонок по этому номеру "
+
+#: controllers/twofa/mo2fa-inline-registration.php:192
+msgid ""
+"You will receive a phone call telling a one time passcode. You have to enter "
+"the one time passcode to login. Supported in Landlines, Smartphones, Feature "
+"phones."
+msgstr ""
+"Вы получите телефонный звонок, сообщающий одноразовый код. Вы должны ввести "
+"пароль для входа в систему. Поддерживается в стационарных телефонах, "
+"смартфонах, телефонах с функциями."
+
+#: controllers/twofa/mo2fa-inline-registration.php:262
+#: controllers/twofa/mo2fa-inline-registration.php:332
+msgid ""
+"You will receive a push notification on your phone. You have to ACCEPT or "
+"DENY it to login. Supported in Smartphones only."
+msgstr ""
+"Вы получите push-уведомление на своем телефоне. Вы должны ПРИНЯТЬ ИЛИ "
+"ОТКЛОНИТЬ его для входа в систему. Поддерживается только в смартфонах."
+
+#: controllers/twofa/mo2fa-inline-registration.php:164
+msgid ""
+"You will receive an email with link. You have to click the ACCEPT or DENY "
+"link to verify your email. Supported in Desktops, Laptops, Smartphones."
+msgstr ""
+"Вы получите электронное письмо со ссылкой. Вы должны нажать ссылку ПРИНЯТЬ "
+"или ОТКЛОНИТЬ, чтобы подтвердить свою электронную почту. Поддерживается на "
+"Персональных компьютерах, ноутбуках, смартфонах."
+
+#: controllers/twofa/mo2fa-common-login.php:1562
+msgid ""
+"You will receive the backup codes via email if you have your SMTP configured."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:429
+msgid "Your account has been created successfully."
+msgstr "Ваша учетная запись создана успешно."
+
+#: handler/twofa/class-mo2fconstants.php:432
+msgid "Your account has been removed. Please contact your administrator."
+msgstr "Ваша учетная запись была удалена. Обратитесь к администратору."
+
+#: handler/twofa/class-mo2fconstants.php:330
+msgid "Your account has been retrieved successfully."
+msgstr "Ваша учетная запись была успешно восстановлена."
+
+#: handler/twofa/class-mo2fconstants.php:396
+msgid ""
+"Your App Time is not in sync.Go to settings and tap on tap on Sync Time now ."
+msgstr ""
+"Время вашего приложения не синхронизировано. Войдите в настройки и нажмите "
+"«Применить синхронизацию времени»."
+
+#: handler/twofa/class-mo2fconstants.php:318
+msgid "Your Duo configuration has been reset successfully."
+msgstr ""
+
+#: handler/twofa/class-miniorange-authentication.php:2545
+msgid "Your KBA as alternate 2 factor is configured successfully."
+msgstr "Ваши секретные вопросы как альтернативный 2-фактор настроены успешно."
+
+#: handler/twofa/class-mo2fconstants.php:60
+msgid ""
+"Your license has expired. Please renew your license to continue using our "
+"service."
+msgstr ""
+"Срок действия вашей лицензии истек. Пожалуйста, обновите лицензию, чтобы "
+"продолжить использовать наш сервис."
+
+#: handler/twofa/class-mo2fconstants.php:471
+msgid ""
+"Your limit of 3 users has exceeded. Please upgrade to premium plans for more "
+"users."
+msgstr ""
+
+#: handler/twofa/class-mo2fconstants.php:459
+msgid ""
+"Your phone number is not configured. Please configure it before selecting "
+"OTP Over SMS as your 2-factor method."
+msgstr ""
+"Ваш номер телефона не настроен. Пожалуйста, настройте его перед тем, как "
+"выбрать одноразовый код через SMS в качестве вашего двухфакторного метода."
+
+#: handler/twofa/class-mo2fconstants.php:351
+msgid "Your query could not be submitted. Please try again."
+msgstr "Ваш запрос не может быть отправлен. Пожалуйста, попробуйте еще раз."
+
+#: handler/twofa/class-mo2fconstants.php:357
+msgid "Your settings are saved successfully."
+msgstr "Ваши настройки сохранены успешно."
+
+#: handler/twofa/class-mo2fconstants.php:195
+msgid ""
+"Your user creation limit has been completed. Please upgrade your license to "
+"add more users."
+msgstr ""
+"Ваш лимит создания пользователя завершен. Обновите лицензию, чтобы добавить "
+"больше пользователей."

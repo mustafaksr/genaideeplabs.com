@@ -1,0 +1,22 @@
+{
+  "name": "blockify",
+  "version": "1.0.0",
+  "description": "[![Packagist](https://img.shields.io/packagist/v/blockify/theme.svg?color=239922&style=popout)](https://packagist.org/packages/blockify/theme) [![CI Status](https://github.com/blockifywp/theme/actions/workflows/integrate.yml/badge.svg)](https://github.com/blockifywp/theme/actions) [![License](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/blockifywp/theme/blob/main/LICENSE) [![WordPress.org](https://img.shields.io/wordpress/theme/installs/blockify?label=WordPress.org)](https://img.shields.io/wordpress/theme/installs/blockify?label=WordPress.org)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^16.4.5",
+    "dotenv-webpack": "^8.1.0",
+    "remark-html": "^16.0.1",
+    "remark-loader": "^6.0.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
