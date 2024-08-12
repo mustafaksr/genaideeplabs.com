@@ -1,4 +1,4 @@
-# GenaIDeepLabs Project
+# GenAiDeepLabs Project
 
 This repository contains the code and infrastructure setup for the GenaIDeepLabs project, which includes multiple applications deployed using Flask and Google Cloud.
 
