@@ -1,8 +1,10 @@
 ## Create Ubuntu Image Manually for Automl
-
+You need to create a VM first, thrn SSH into this VM.
 1. Install conda and requirements.txt:
 
     ```bash
+    sudo apt-get update
+    
     #install conda
     chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh 
     ./Anaconda3-2024.02-1-Linux-x86_64.sh 
